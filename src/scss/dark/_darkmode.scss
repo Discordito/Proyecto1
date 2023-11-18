@@ -66,7 +66,7 @@
             }
         }
         .formulario input:not([type=submit]) {
-            background-color: lightem($grisOscuro, 20%);
+            background-color: lighten($grisOscuro, 20%);
             color: v.$blanco;
             &::placeholder {
                 color: darken(v.$grisClaro, 30%);
