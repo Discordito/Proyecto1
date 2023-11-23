@@ -21,5 +21,4 @@ class Proyecto extends ActiveRecord {
         }
         return self::$alertas;
     }
-
 }

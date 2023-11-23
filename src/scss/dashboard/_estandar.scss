@@ -1,0 +1,28 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.listado-items {
+    color: v.$negro;
+    
+    .estandar {
+        display:block;
+        background-color: lighten(v.$grisOscuro, 50%);
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        p {
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+            color: v.$negro;
+        }
+        input[type="radio"] {
+            
+        }
+    }
+}
+.puntaje {
+    .puntaje-texto {
+        color: v.$negro;
+    }
+}

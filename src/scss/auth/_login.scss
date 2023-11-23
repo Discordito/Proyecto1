@@ -3,7 +3,7 @@
 
 .login {
     margin-top: 5rem;
-    .uptask {
+    .logo {
         @include m.textoDegradado(v.$cyan);
     }
     input[type="submit"] {

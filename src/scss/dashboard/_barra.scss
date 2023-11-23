@@ -43,7 +43,7 @@
         }
     }
     .cerrar-sesion {
-        @include m.boton(darken(v.$indigo, 20%), v.$blanco);
+        @include m.boton(darken(v.$gris, 20%), v.$blanco);
         font-size: 1.4rem;
         padding: 1rem;
         border-radius: .5rem;

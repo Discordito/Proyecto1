@@ -2,6 +2,8 @@
 
 namespace Controllers;
 
+use Model\Estandar;
+use Model\Item;
 use Model\Proyecto;
 use Model\Usuario;
 use MVC\Router;
@@ -10,58 +12,25 @@ class DashboardController {
     public static function index(Router $router) {
         session_start();
         isAuth();
-        $id = $_SESSION['id'];
-        $proyectos = Proyecto::belognsTo('propietarioid', $id);
-        $router->render('dashboard/index', [
-            'titulo' => 'Proyectos',
-            'proyectos' => $proyectos
+        $estandares = Estandar::all();
+        $router->render('dashboard/index',[
+            'titulo' => 'Estandares',
+            'estandares' => $estandares
         ]);
 
     }
-    public static function crear_proyecto(Router $router) {
+     public static function estandar(Router $router){
         session_start();
-        isAuth();
-        $alertas = [];
+        $id = $_GET['id'];
+        $estandares = Estandar::where('id', $id);
+        $items = Item::belognsTo('estandarid', $id);
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $proyecto = new Proyecto($_POST);
-
-            //validacion
-            $alertas = $proyecto->validarProyecto();
-
-            if(empty($alertas)) {
-                //generar url unica
-                $hash = md5(uniqid());
-                $proyecto->url = $hash;
-
-                //almacenar creador del proyecto
-                $proyecto->propietarioid = $_SESSION['id'];
-
-                //guarda el proyecto
-                $proyecto->guardar();
-
-                //redireccionar
-                header('Location: /proyecto?id=' . $proyecto->url);
-            }
+            debuguear($items);
         }
-        $router->render('dashboard/crear-proyecto', [
-            'alertas' => $alertas,
-            'titulo' => 'Crear Proyecto'
-        ]);
-    }
-    public static function proyecto(Router $router){
-        session_start();
-        isAuth();
-        $token = $_GET['id'];
-        if(!$token) header('Location: /dashboard');
-        //revisar permisos de proyectos
-        $proyecto = Proyecto::where('url', $token);
-        if($proyecto->propietarioid !== $_SESSION['id']){
-            header('Location: /dashboard');
-        }
-
-
-        $router->render('dashboard/proyecto', [
-            'titulo' => $proyecto->proyecto
+        $router->render('dashboard/estandar',[
+            'titulo' => $estandares->nombre,
+            'id' => $estandares,
+            'items' => $items
         ]);
     }
     public static function perfil(Router $router) {

@@ -5,11 +5,11 @@
     <a href="/cambiar-password" class="enlace">Cambiar Contraseña</a>
     <form action="/perfil" class="formulario" method="POST">
         <div class="campo">
-            <label for="nombre">Nombre</label>
+            <label for="nombre">Nombre:</label>
             <input type="text" value="<?php echo $usuario->nombre; ?>" name="nombre" placeholder="Tu Nombre">
         </div>
         <div class="campo">
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="email" value="<?php echo $usuario->email; ?>" name="email" placeholder="Tu email">
         </div>
         <input type="submit" value="Guardar Cambios">

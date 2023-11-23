@@ -7,6 +7,7 @@
     nuevaTareaBtn.addEventListener('click', function(){
         mostrarFormulario();
     });
+    
 
     //filtros de busqueda
     const filtros = document.querySelectorAll('#filtros input[type="radio"]');
