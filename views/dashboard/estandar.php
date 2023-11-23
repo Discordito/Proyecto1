@@ -1,7 +1,7 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
 <ul class="listado-items" id="listado-items">    
-    <?php include_once __DIR__ . '/../templates/alertas.php.php'; ?>
+    <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     <form class="formulario" action="">
         <?php foreach($items as $item){ ?>
             <li class="estandar">
