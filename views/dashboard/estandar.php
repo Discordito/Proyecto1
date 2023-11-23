@@ -32,7 +32,7 @@
                     </div>
                 </li>        
         <?php } ?>
-        <input type="button" id="respondido"  value="Guardar">        
+        <input type="button" id="respondido" class="guardar" value="Guardar">        
     </form>
     <div id="puntaje" class="puntaje">
             <p>Tu puntaje es: </p>

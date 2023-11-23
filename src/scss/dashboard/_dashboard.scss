@@ -20,8 +20,12 @@
         }
     }
     .formulario {
+        .guardar {
+            @include m.boton(lighten(v.$indigo, 8%), v.$blanco);
+            padding: 1.5rem 4rem;
+            margin-top: 2rem;
+        }
         input:not([type="submit"]) {
-            background-color: v.$blanco;
         }
         input[type="submit"] {
             @include m.boton(v.$indigo, v.$blanco);
