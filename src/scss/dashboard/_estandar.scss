@@ -11,9 +11,6 @@
         padding-bottom: 1rem;
         padding-right: 1rem;
         padding-left: 1rem;
-        @include m.tablet {
-            display:block;             
-        }
         .preguntas {
             display: block;
             
@@ -29,8 +26,25 @@
                     width: 1.4rem;
                 }
             }
+            label {
+               
+            }
             .pregunta {            
                 margin-bottom: 1.5rem;
+                
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem 5rem;
+                @include m.tablet {
+                    display: flex;
+                    vertical-align: middle;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    label {
+                        margin-right: 0.5rem;
+                    }
+                }
             }
         }
         p {
