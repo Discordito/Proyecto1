@@ -20,6 +20,18 @@
             @include m.tablet {
                 display:flex; 
             }
+            input[type="radio"] {
+                height: 1.7rem;
+                width: 1.7rem;
+                vertical-align: middle;
+                @include m.tablet {
+                    height: 1.4rem;
+                    width: 1.4rem;
+                }
+            }
+            .pregunta {            
+                margin-bottom: 1.5rem;
+            }
         }
         p {
             display: flex;
@@ -27,18 +39,7 @@
             padding-top: 1rem;
             color: v.$negro;
         }
-        input[type="radio"] {
-            height: 1.7rem;
-            width: 1.7rem;
-            vertical-align: middle;
-            @include m.tablet {
-                height: 1.3rem;
-                width: 1.3rem;
-            }
-        }
-        .pregunta {            
-            margin-bottom: 1.5rem;
-        }
+        
     }
 }
 .puntaje {
