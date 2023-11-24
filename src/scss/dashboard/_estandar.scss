@@ -28,11 +28,15 @@
             color: v.$negro;
         }
         input[type="radio"] {
-            height: 1.6rem;
-            width: 1.6rem;
+            height: 1.7rem;
+            width: 1.7rem;
             vertical-align: middle;
+            @include m.tablet {
+                height: 1.3rem;
+                width: 1.3rem;
+            }
         }
-        .pregunta {
+        .pregunta {            
             margin-bottom: 1.5rem;
         }
     }
