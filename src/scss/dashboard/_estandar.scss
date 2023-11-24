@@ -4,12 +4,23 @@
 .listado-items {
     color: v.$negro;
     
-    .estandar {
-        display:block;
+    .estandar {  
+        list-style: none;
+        text-align: center; 
         background-color: lighten(v.$grisOscuro, 50%);
         padding-bottom: 1rem;
         padding-right: 1rem;
         padding-left: 1rem;
+        @include m.tablet {
+            display:block;             
+        }
+        .preguntas {
+            display: block;
+            
+            @include m.tablet {
+                display:flex; 
+            }
+        }
         p {
             display: flex;
             justify-content: center;

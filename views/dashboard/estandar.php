@@ -10,12 +10,12 @@
                 </p>            
                     <div class="preguntas">
                         <div class="pregunta">
-                            <label for="respuesta1">Muy Poco</label>
-                            <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="1" checked/>
+                            <label for="respuesta1">Muy Poco <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="1" checked/></label>
+                            
                         </div>
                         <div class="pregunta">
-                            <label for="respuesta2">Poco</label>
-                            <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="2"/>
+                            <label for="respuesta2">Poco <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="2"/></label>
+                            
                         </div>
                         <div class="pregunta">
                             <label for="respuesta3">Normal</label>
@@ -32,7 +32,7 @@
                     </div>
                 </li>        
         <?php } ?>
-        <input type="button" id="respondido" class="guardar" value="Guardar">        
+        <input type="button" id="respondido" class="guardar" value="Comprobar">        
     </form>
     <div id="puntaje" class="puntaje">
             <p>Tu puntaje es: </p>
