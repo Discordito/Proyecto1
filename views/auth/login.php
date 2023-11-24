@@ -6,11 +6,11 @@
         <?php include_once __DIR__ .'/../templates/alertas.php'; ?>
         <form action="/" method="POST" class="formulario">
             <div class="campo">
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="Tu Email">
             </div>
             <div class="campo">
-                <label for="password">Contraseña</label>
+                <label for="password">Contraseña:</label>
                 <input type="password" name="password" id="password" placeholder="Tu Contraseña">
             </div>
             <input type="submit" class="boton" value="Iniciar Sesión">
