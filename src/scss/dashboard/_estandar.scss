@@ -2,58 +2,55 @@
 @use 'base/variables' as v;
 
 .listado-items {
-    color: v.$negro;
+    color: v.$negro;    
     
-    .estandar {  
-        list-style: none;
-        text-align: center; 
-        background-color: lighten(v.$grisOscuro, 50%);
-        padding-bottom: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        .preguntas {
-            display: block;
-            
-            @include m.tablet {
-                display:flex; 
-            }
-            input[type="radio"] {
-                height: 1.7rem;
-                width: 1.7rem;
-                vertical-align: middle;
-                @include m.tablet {
-                    height: 1.4rem;
-                    width: 1.4rem;
-                }
-            }
-            label {
-               
-            }
-            .pregunta {            
-                margin-bottom: 1.5rem;
-                
-                display: flex;
-                justify-content: space-between;
-                margin: 1rem 5rem;
-                @include m.tablet {
-                    display: flex;
-                    vertical-align: middle;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                    label {
-                        margin-right: 0.5rem;
-                    }
-                }
-            }
-        }
-        p {
-            display: flex;
-            justify-content: center;
-            padding-top: 1rem;
-            color: v.$negro;
-        }
+}
+.estandar {  
+    list-style: none;
+    text-align: center; 
+    background-color: lighten(v.$grisOscuro, 50%);
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    .preguntas {
+        display: block;
         
+        @include m.tablet {
+            display:flex; 
+        }
+        input[type="radio"] {
+            height: 1.7rem;
+            width: 1.7rem;
+            vertical-align: middle;
+            @include m.tablet {
+                height: 1.4rem;
+                width: 1.4rem;
+            }
+        }          
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        color: v.$negro;
+    }
+    
+}
+.pregunta {            
+    margin-bottom: 1.5rem;
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 5rem;
+    @include m.tablet {
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        label {
+            margin-right: 0.5rem;
+        }
     }
 }
 .puntaje {
