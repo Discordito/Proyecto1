@@ -28,7 +28,12 @@
             color: v.$negro;
         }
         input[type="radio"] {
-            
+            height: 1.4rem;
+            width: 1.4rem;
+            vertical-align: middle;
+        }
+        .pregunta {
+            margin-bottom: 1rem;
         }
     }
 }

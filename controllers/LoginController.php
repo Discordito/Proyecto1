@@ -117,7 +117,7 @@ class LoginController {
                     $email->enviarInstrucciones();
 
                 }else {
-                    Usuario::setAlerta('error', 'El usuario no existe o no est confirmado');
+                    Usuario::setAlerta('error', 'El usuario no existe o no esta confirmado');
                 }
             }
         }

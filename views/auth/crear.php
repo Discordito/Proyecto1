@@ -7,7 +7,7 @@
         <form action="/crear" method="POST" class="formulario">
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="emnombreail" placeholder="Tu Nombre" value="<?php $usuario->nombre; ?>">
+                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?php $usuario->nombre; ?>">
             </div>
             <div class="campo">
                 <label for="email">Email</label>
