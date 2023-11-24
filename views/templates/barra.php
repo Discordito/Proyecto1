@@ -1,5 +1,5 @@
 <div class="barra-mobile">
-    <h1>PorDefinir</h1>
+    <h1>'P.D.'</h1>
     <div class="menu">
         <img src="build/img/menu.svg" alt="imagen menu" id="mobile-menu">
     </div>
