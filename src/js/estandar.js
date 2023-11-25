@@ -1,6 +1,7 @@
 (function(){  
     //estandares
-    let res1 = "";
+    document.getElementById("mydata").setAttribute('value', mydata);
+    let res1 = 0;
     
     const respuesta = document.querySelector('#respondido');
     respuesta.addEventListener('click', function() {
@@ -45,6 +46,7 @@
         textoRespuesta.textContent = "Tu puntaje es: " + res1;
         contenedorRespuesta.appendChild(textoRespuesta);
         limpiarRespuesta();
+        res1=0;
         
     }
     function limpiarRespuesta() {
@@ -52,8 +54,13 @@
         respuestaAnterior.removeChild(respuestaAnterior.firstElementChild);         
     }
 
-   
-
+    //guardar registro
+    const btnRegistro = document.querySelector('#registrar');
+    btnRegistro.addEventListener('click', function() {
+        document.getElementById("mydata").setAttribute('value', mydatas);
+        var now = new Date();
+        console.log(now);     
+    });
 
 
 })();

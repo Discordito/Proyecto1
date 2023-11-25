@@ -5,6 +5,7 @@ namespace Controllers;
 use Model\Estandar;
 use Model\Item;
 use Model\Proyecto;
+use Model\Registro;
 use Model\Usuario;
 use MVC\Router;
 
@@ -17,15 +18,23 @@ class DashboardController {
             'titulo' => 'Estandares',
             'estandares' => $estandares
         ]);
-
     }
-     public static function estandar(Router $router){
+    public static function estandar(Router $router){
         session_start();
+        $ro = [];
+        $registro = new Registro();
         $id = $_GET['id'];
         $estandares = Estandar::where('id', $id);
         $items = Item::belognsTo('estandarid', $id);
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            debuguear($items);
+            
+            var_dump($_POST);
+            
+            $ro = $_POST;                    
+            foreach($ro as $key => $value){
+                $registro->usuarios_id = $_SESSION['id'];
+                $registro->item_id = $key;
+            }          
         }
         $router->render('dashboard/estandar',[
             'titulo' => $estandares->nombre,
@@ -107,5 +116,8 @@ class DashboardController {
             'alertas' => $alertas,
             ''
         ]);
+    }
+    public static function registro(Router $router){
+        session_start(); 
     }
 }

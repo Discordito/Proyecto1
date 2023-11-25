@@ -20,7 +20,7 @@
         }
     }
     .formulario {
-        .guardar {
+        .comprobar {
             @include m.boton(lighten(v.$indigo, 8%), v.$blanco);
             padding: 1.5rem 4rem;
             margin-top: 2rem;

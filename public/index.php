@@ -30,16 +30,19 @@ $router->post('/reestablecer', [LoginController::class, 'reestablecer']);
 $router->get('/mensaje', [LoginController::class, 'mensaje']);
 $router->get('/confirmar', [LoginController::class, 'confirmar']);
 
-//dashboard / proyectos
+//dashboard / estandares
 $router->get('/dashboard', [DashboardController::class, 'index']);
 $router->get('/crear-proyecto', [DashboardController::class, 'crear_proyecto']);
 $router->post('/crear-proyecto', [DashboardController::class, 'crear_proyecto']);
 $router->get('/proyecto', [DashboardController::class, 'proyecto']);
 $router->get('/estandar', [DashboardController::class, 'estandar']);
+$router->post('/estandar', [DashboardController::class, 'estandar']);
 $router->get('/perfil', [DashboardController::class, 'perfil']);
 $router->post('/perfil', [DashboardController::class, 'perfil']);
 $router->get('/cambiar-password', [DashboardController::class, 'cambiar_password']);
 $router->post('/cambiar-password', [DashboardController::class, 'cambiar_password']);
+$router->get('/registro', [DashboardController::class, 'registro']);
+$router->post('/registro', [DashboardController::class, 'registro']);
 
 //api para las tareas
 $router->get('/api/tareas', [TareaController::class, 'index']);
