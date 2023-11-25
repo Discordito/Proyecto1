@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 <div class="contenedor crear">
     <?php include_once __DIR__ .'/../templates/nombre-sitio.php'; ?>
 
@@ -16,10 +18,12 @@
             <div class="campo">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Tu Contraseña">
+                <i class="fa fa-eye" id="togglePassword"></i>
             </div>
             <div class="campo">
                 <label for="password2">Repetir Contraseña</label>
                 <input type="password" name="password2" id="password2" placeholder="Repite tu Contraseña">
+                <i class="fa fa-eye" id="togglePassword2"></i>
             </div>
             <input type="submit" class="boton" value="Crear Cuenta">
         </form>
@@ -29,3 +33,5 @@
         </div>
     </div>
 </div>
+<?php $script .= '
+    <script src="build/js/app.js"></script>'; ?>
