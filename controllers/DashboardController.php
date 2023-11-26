@@ -9,6 +9,8 @@ use Model\Registro;
 use Model\Usuario;
 use MVC\Router;
 
+use function PHPSTORM_META\type;
+
 class DashboardController {
     public static function index(Router $router) {
         session_start();
@@ -26,15 +28,55 @@ class DashboardController {
         $id = $_GET['id'];
         $estandares = Estandar::where('id', $id);
         $items = Item::belognsTo('estandarid', $id);
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            
-            var_dump($_POST);
-            
-            $ro = $_POST;                    
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){          
+            $ro = $_POST;      
             foreach($ro as $key => $value){
-                $registro->usuarios_id = $_SESSION['id'];
-                $registro->item_id = $key;
-            }          
+                if(gettype($key) === gettype('')){
+                    $registro->date = $value;  
+                                      
+                }else {
+                    $registro->usuarios_id = $_SESSION['id'];
+                    $registro->item_id = $key;
+                    if($key === 1){
+                        $registro->puntaje = $value*0.2;
+                    }
+                    if($key === 2){
+                        $registro->puntaje = $value*0.6;
+                    }
+                    if($key === 3){
+                        $registro->puntaje = $value*0.5;
+                    }
+                    if($key === 4){
+                        $registro->puntaje = $value*0.2;
+                    }
+                    if($key === 5){
+                        $registro->puntaje = $value*0.1;
+                    }
+                    if($key === 6){
+                        $registro->puntaje = $value*0.2;
+                    }
+                    if($key === 7){
+                        $registro->puntaje = $value*0.2;
+                    }
+                    if($key === 8){
+                        $registro->puntaje = $value*0.5;
+                    }
+                    if($key === 9){
+                        $registro->puntaje = $value*0.5;
+                    }
+                    if($key === 10){
+                        $registro->puntaje = $value*1;
+                    }
+                    var_dump($registro);
+                }
+                
+                  
+                
+                // $registro->date = $key;
+                
+            } 
+            
+              
         }
         $router->render('dashboard/estandar',[
             'titulo' => $estandares->nombre,

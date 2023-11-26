@@ -6,8 +6,9 @@
     text-align: center; 
     background-color: lighten(v.$grisOscuro, 50%);
     padding-bottom: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;   
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;   
 }
 .preguntas {  
     display: flex;
@@ -55,5 +56,47 @@ p {
 .puntaje {
     .puntaje-texto {
         color: v.$negro;
+    }
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+.listado-items {
+    padding-left: 0;
+}
+.no-proyectos {
+    a {
+        color: v.$indigo;
+    }
+}
+.listado-proyectos {
+    list-style: none;
+    padding: 0;
+    margin-top: 3rem;
+    @include m.grid(1, 2rem);
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+    @include m.desktop {
+        @include m.grid(3, 2rem);
+    }
+
+    .proyecto {
+        background-color: lighten(v.$indigo,5%);
+        min-height: 12rem;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        line-height: 2;
+        border-radius: .5rem;
+
+        &:hover {
+            background-color: darken(v.$indigo, 5%);
+        }
+
+        a{
+            color: v.$blanco;
+        }
     }
 }

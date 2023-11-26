@@ -1,6 +1,9 @@
+const moment = require("moment/moment");
+
+
 (function(){  
     //estandares
-    document.getElementById("mydata").setAttribute('value', mydata);
+    
     let res1 = 0;
     
     const respuesta = document.querySelector('#respondido');
@@ -55,11 +58,12 @@
     }
 
     //guardar registro
+    
     const btnRegistro = document.querySelector('#registrar');
     btnRegistro.addEventListener('click', function() {
-        document.getElementById("mydata").setAttribute('value', mydatas);
         var now = new Date();
-        console.log(now);     
+        now = moment(now).format('YYYY-MM-DD HH:mm:ss');
+        document.getElementById("mydata").setAttribute('value', now);
     });
 
 
