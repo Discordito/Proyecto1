@@ -77,7 +77,6 @@ class DashboardController {
         session_start();
         $id = $_SESSION['id'];
         $registros = Registro::belognsTo('usuarios_id', $id);
-        var_dump($registros);
 
         $router->render('dashboard/registro',[
             'titulo' => 'Registros',

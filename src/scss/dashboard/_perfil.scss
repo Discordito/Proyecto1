@@ -1,0 +1,11 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.btnes-perfil {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    a {
+        margin-top: 3.2rem;
+    }
+}

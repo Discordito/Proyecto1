@@ -57,10 +57,23 @@ p {
     .puntaje-texto {
         color: v.$negro;
     }
+    p {
+        display: flex;
+        justify-content: left;
+    }
 }
 .botones {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    a {
+        @include m.tablet {
+            font-size: inherit;
+        }
+        padding-top: 2rem;
+        margin: 1rem 2.9rem;
+        font-size: 2rem; 
+        
+    }
 }
 .listado-items {
     padding-left: 0;

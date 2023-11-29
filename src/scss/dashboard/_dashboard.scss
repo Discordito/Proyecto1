@@ -20,19 +20,19 @@
         }
     }
     .formulario {
-        .comprobar {
+        .comprobar,input[type="submit"] {
             @include m.boton(lighten(v.$indigo, 8%), v.$blanco);
-            padding: 1.5rem 4rem;
+            padding: 1.5rem 0.5rem;
             margin-top: 2rem;
+            width: 50%;
+            @include m.tablet {
+                padding: 1.5rem 4rem;
+            }
+            
         }
         input:not([type="submit"]) {
         }
-        input[type="submit"] {
-            @include m.boton(v.$indigo, v.$blanco);
-            padding: 1rem;
-            font-size: 1.4rem;
-            font-weight: bold;
-        }
+         
     }
     .enlace {
         color: v.$indigo;

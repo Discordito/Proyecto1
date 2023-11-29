@@ -10,6 +10,7 @@
         </li>        
     <?php } ?>
 </ul>
+<a href="/dashboard" class="enlace"> Volver</a>    
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
 <?php $script .= '

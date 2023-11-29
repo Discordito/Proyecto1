@@ -35,16 +35,15 @@
         <?php } ?>
         <?php $_SESSION['tiempo'] = '$mydata' ?>
         <div class="botones">
-        <input type="button" id="respondido" class="comprobar" value="Comprobar">        
-        <input type="submit" id="registrar" class="comprobar" value="Guardar"> 
-        </div>
-          
-            
-    </form>
-    <div id="puntaje" class="puntaje">
-            <p>Tu puntaje es: </p>
-    </div>
+            <input type="button" id="respondido" class="comprobar" value="Comprobar">   
+            <a href="/dashboard" class="enlace"> Volver</a>     
+            <input type="submit" id="registrar" class="comprobar" value="Guardar">         
+        </div>          
+    </form>    
 </ul>
+<div id="puntaje" class="puntaje">
+    <p>Tu puntaje es: </p>
+</div>
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
 <?php $script .= '
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
