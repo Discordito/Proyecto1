@@ -12,23 +12,23 @@
                 <div class="preguntas">                        
                     <div class="pregunta">
                         <label for="respuesta1">Muy Poco</label>
-                        <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="1" checked/>
+                        <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="20" checked/>
                     </div>
                     <div class="pregunta">
                         <label for="respuesta2">Poco</label>
-                        <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="2"/>    
+                        <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="40"/>    
                     </div>
                     <div class="pregunta">
                         <label for="respuesta3">Normal</label>
-                        <input type="radio" id="respuesta3" name="<?php echo $item->id; ?>"value="3" />
+                        <input type="radio" id="respuesta3" name="<?php echo $item->id; ?>"value="60" />
                     </div>
                     <div class="pregunta">
                         <label for="respuesta4">Mucho</label>
-                        <input type="radio" id="respuesta4" name="<?php echo $item->id; ?>" value="4"/>   
+                        <input type="radio" id="respuesta4" name="<?php echo $item->id; ?>" value="80"/>   
                     </div>
                     <div class="pregunta">
                         <label for="respuesta5">Demasiado</label>
-                        <input type="radio" id="respuesta5" name="<?php echo $item->id; ?>" value="5"/>                              
+                        <input type="radio" id="respuesta5" name="<?php echo $item->id; ?>" value="100"/>                              
                     </div>                  
                 </div>
             </li>        

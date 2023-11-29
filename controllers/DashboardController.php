@@ -23,6 +23,7 @@ class DashboardController {
     }
     public static function estandar(Router $router){
         session_start();
+        $suma = 0;
         $ro = [];
         $registro = new Registro();
         $id = $_GET['id'];
@@ -32,56 +33,55 @@ class DashboardController {
             $ro = $_POST;      
             foreach($ro as $key => $value){
                 if(gettype($key) === gettype('')){
-                    $registro->date = $value;  
-                                      
+                    $registro->date = $value;                                        
                 }else {
-                    $registro->usuarios_id = $_SESSION['id'];
-                    $registro->item_id = $key;
-                    if($key === 1){
-                        $registro->puntaje = $value*0.2;
+                    $registro->usuarios_id = intval($_SESSION['id']);
+                    $registro->estandar_id = intval($id);
+                    if($id === '1'){
+                        if($key === 1){$suma = $value*0.2;}
+                        if($key === 3){$suma = $suma + ($value*0.5); }
+                        if($key === 4){$suma = $suma + ($value*0.2);  }
+                        if($key === 5){$suma = $suma + ($value*0.1);  }
                     }
-                    if($key === 2){
-                        $registro->puntaje = $value*0.6;
+                    if($id === '2') {
+                        if($key === 2){$suma = $suma + ($value*0.6);}
+                        if($key === 6){$suma = $suma + ($value*0.2);}
+                        if($key === 7){$suma = $suma + ($value*0.2);}
                     }
-                    if($key === 3){
-                        $registro->puntaje = $value*0.5;
+                    if($id === '3') {
+                        if($key === 8){$suma = $value*0.5;}
+                        if($key === 9){$suma = $suma + ($value*0.5);}
                     }
-                    if($key === 4){
-                        $registro->puntaje = $value*0.2;
+                    if($id === '4') {
+                        if($key === 10){$suma = $value*1;}
                     }
-                    if($key === 5){
-                        $registro->puntaje = $value*0.1;
-                    }
-                    if($key === 6){
-                        $registro->puntaje = $value*0.2;
-                    }
-                    if($key === 7){
-                        $registro->puntaje = $value*0.2;
-                    }
-                    if($key === 8){
-                        $registro->puntaje = $value*0.5;
-                    }
-                    if($key === 9){
-                        $registro->puntaje = $value*0.5;
-                    }
-                    if($key === 10){
-                        $registro->puntaje = $value*1;
-                    }
-                    var_dump($registro);
+                    $suma = floor($suma);
+                    $registro->puntaje = $suma;
                 }
-                
-                  
-                
                 // $registro->date = $key;
                 
-            } 
-            
-              
+            }             
+            // var_dump($registro);
+            $registro->guardar();
+            Estandar::setAlerta('exito', 'Registro guardado correctamente');
         }
+        $alertas = Estandar::getAlertas();
         $router->render('dashboard/estandar',[
             'titulo' => $estandares->nombre,
             'id' => $estandares,
-            'items' => $items
+            'items' => $items,
+            'alertas' => $alertas
+        ]);
+    }
+    public static function registro(Router $router){
+        session_start();
+        $id = $_SESSION['id'];
+        $registros = Registro::belognsTo('usuarios_id', $id);
+        var_dump($registros);
+
+        $router->render('dashboard/registro',[
+            'titulo' => 'Registros',
+            'registros' => $registros
         ]);
     }
     public static function perfil(Router $router) {
@@ -158,8 +158,5 @@ class DashboardController {
             'alertas' => $alertas,
             ''
         ]);
-    }
-    public static function registro(Router $router){
-        session_start(); 
     }
 }

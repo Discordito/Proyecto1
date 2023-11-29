@@ -5753,7 +5753,29 @@ const moment = require("moment/moment");
         now = moment(now).format('YYYY-MM-DD HH:mm:ss');
         document.getElementById("mydata").setAttribute('value', now);
     });
-
+    
+    const alerta = document.querySelector('#registrar');
+    alerta.addEventListener('click', function() {
+        Alerta();
+    });
+    function Alerta(){
+        Swal.fire({
+            title: "The Internet?",
+            text: "That thing is still around?",
+            icon: "question"
+          });
+    }
+    
+    document.body.addEventListener('click', function() {
+        elminarMensaje();
+    });
+    function elminarMensaje(){
+        const mensaje = document.getElementById("alerta");
+        setTimeout(() => {
+            mensaje.remove();
+        }, 500);
+        
+    }
 
 })();
 },{"moment/moment":1}]},{},[2]);

@@ -1,7 +1,17 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
-<div class="contenedor-sm">
-    <?php include_once __DIR__ . '/../templates/alertas.php' ?>
-</div>
+<ul class="listado-items" id="listado-items">
+    
+    <?php foreach($registros as $registro){ ?>
+        <li class="estandar">            
+            <div class="registros">
+                <p>Fecha: <?php echo $registro->date;?> Estandar: <?php echo $registro->estandar_id; ?> Puntaje: <?php echo $registro->puntaje;?></p>
+            </div>
+        </li>        
+    <?php } ?>
+</ul>
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
+<?php $script .= '
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>'; ?>
