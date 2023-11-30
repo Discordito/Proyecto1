@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use DateTime;
 use Model\Estandar;
 use Model\Item;
 use Model\Proyecto;
@@ -77,7 +78,11 @@ class DashboardController {
         session_start();
         $id = $_SESSION['id'];
         $registros = Registro::belognsTo('usuarios_id', $id);
-
+        foreach($registros as $reg){
+            $nwDate = $reg->date;
+            $fnDate = date("d-m-Y H:i:s", strtotime($nwDate)); 
+            $reg->date = $fnDate;          
+        }
         $router->render('dashboard/registro',[
             'titulo' => 'Registros',
             'registros' => $registros
