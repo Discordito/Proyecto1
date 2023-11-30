@@ -43,6 +43,8 @@ $router->get('/cambiar-password', [DashboardController::class, 'cambiar_password
 $router->post('/cambiar-password', [DashboardController::class, 'cambiar_password']);
 $router->get('/registro', [DashboardController::class, 'registro']);
 $router->post('/registro', [DashboardController::class, 'registro']);
+$router->get('/membresia', [DashboardController::class, 'membresia']);
+$router->post('/membresia', [DashboardController::class, 'membresia']);
 
 //api para las tareas
 $router->get('/api/tareas', [TareaController::class, 'index']);

@@ -1,5 +1,7 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
+
+
 <ul class="listado-items" id="listado-items">    
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     <form class="formulario" action="" method="POST">
@@ -48,5 +50,4 @@
 <?php $script .= '
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="build/js/mobile.js"></script>
-    <script type="module" src="/build/js/bundle.js"></script>'; ?>
+    <script src="/build/js/bundle-estandar.js"></script>'; ?>

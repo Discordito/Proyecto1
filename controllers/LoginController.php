@@ -72,6 +72,7 @@ class LoginController {
                     //generar token
                     $usuario->crearToken();
 
+                    //membresia
                     //crear nuevo usuario
                     $resultado = $usuario->guardar();
 

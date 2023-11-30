@@ -5688,10 +5688,8 @@
 },{}],2:[function(require,module,exports){
 const moment = require("moment/moment");
 
-
 (function(){  
     //estandares
-    
     let res1 = 0;
     
     const respuesta = document.querySelector('#respondido');
@@ -5744,8 +5742,20 @@ const moment = require("moment/moment");
         const respuestaAnterior = document.getElementById("puntaje");
         respuestaAnterior.removeChild(respuestaAnterior.firstElementChild);         
     }
-
-    //guardar registro
+    const btnRegistro = document.querySelector('#registrar');
+    btnRegistro.addEventListener('click', function() {
+        var now = new Date();
+        now = moment(now).format('YYYY-MM-DD HH:mm:ss');
+        document.getElementById("mydata").setAttribute('value', now);
+    });
+    document.body.addEventListener('click', function() {
+        elminarMensaje();
+    });
+    function elminarMensaje(){
+        const mensaje = document.getElementById("alerta");
+        setTimeout(() => {
+            mensaje.remove();
+        }, 500);    
+    }
 })();
-
 },{"moment/moment":1}]},{},[2]);

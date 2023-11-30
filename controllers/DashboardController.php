@@ -3,8 +3,10 @@
 namespace Controllers;
 
 use DateTime;
+use DateTimeZone;
 use Model\Estandar;
 use Model\Item;
+use Model\Pago;
 use Model\Proyecto;
 use Model\Registro;
 use Model\Usuario;
@@ -30,7 +32,9 @@ class DashboardController {
         $id = $_GET['id'];
         $estandares = Estandar::where('id', $id);
         $items = Item::belognsTo('estandarid', $id);
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){          
+        
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){  
             $ro = $_POST;      
             foreach($ro as $key => $value){
                 if(gettype($key) === gettype('')){
@@ -86,6 +90,49 @@ class DashboardController {
         $router->render('dashboard/registro',[
             'titulo' => 'Registros',
             'registros' => $registros
+        ]);
+    }
+    public static function membresia (Router $router){
+        session_start();
+        $id = $_SESSION['id'];
+        $verificarPago = Pago::where('usuario_id', $id);
+       
+        if(empty($verificarPago)) {
+            $membresia = 'No tiene membresia';
+        } else {
+            $membresia = $verificarPago->descripcion;
+        }
+        
+        
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){    
+            //valida que no venga vacio
+            if(empty($_POST)){
+                echo json_encode([]);
+                return;
+            }
+            $datos = $_POST;
+            $datos['usuario_id'] = $_SESSION['id'];            
+            foreach($datos as $key => $value){
+                if($key === 'date'){
+                    
+                    $zona = new \DateTimeZone("America/Santiago");      
+                    $fechita = new \DateTime('now', $zona);
+                    $fechi = $fechita->format('Y-m-d H:i:s');
+                    $datos['date']= $fechi; 
+                                                           
+                }
+            }    
+                 
+            try{
+                $pago = new Pago($datos);
+                $pago->guardar();
+            } catch (\Throwable $th) {
+                echo 'error';
+            }
+        }
+        $router->render('dashboard/membresia', [
+            'titulo' => 'Membresia',
+            'membresia' => $membresia
         ]);
     }
     public static function perfil(Router $router) {

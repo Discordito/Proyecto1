@@ -1,0 +1,1 @@
+document.body.addEventListener("click",(function(){var e=new Date;e=moment(e).format("YYYY-MM-DD HH:mm:ss"),document.getElementById("miTiempo").setAttribute("value",e),console.log(e)}));

@@ -16,7 +16,6 @@ if(cerrarMenuBtn){
         }, 800);
     });
 }
-
 //eliminar la clase de mostrar en tamasño tablet
 const anchoPantalla = document.body.clientWidth;
 window.addEventListener('resize', function() {

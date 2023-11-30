@@ -1,9 +1,7 @@
-const moment = require("moment/moment");
-
+const { isMoment } = require("moment/moment");
 
 (function(){  
     //estandares
-    
     let res1 = 0;
     
     const respuesta = document.querySelector('#respondido');
@@ -56,15 +54,11 @@ const moment = require("moment/moment");
         const respuestaAnterior = document.getElementById("puntaje");
         respuestaAnterior.removeChild(respuestaAnterior.firstElementChild);         
     }
-
-    //guardar registro
-    
     const btnRegistro = document.querySelector('#registrar');
     btnRegistro.addEventListener('click', function() {
         var now = new Date();
         now = moment(now).format('YYYY-MM-DD HH:mm:ss');
         document.getElementById("mydata").setAttribute('value', now);
     });
-
-
+    
 })();
