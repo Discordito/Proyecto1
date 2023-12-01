@@ -2,6 +2,9 @@
 namespace Controllers;
 
 use Clases\Email;
+use DateInterval;
+use DateTime;
+use Model\Membresia;
 use Model\Usuario;
 use MVC\Router;
 
@@ -10,6 +13,7 @@ class LoginController {
         $alertas = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $usuario = new Usuario($_POST);
+            
 
             $alertas = $usuario->validarLogin();
             if(empty($alertas)){
@@ -26,7 +30,32 @@ class LoginController {
                         $_SESSION['nombre'] = $usuario->nombre;
                         $_SESSION['email'] = $usuario->email;
                         $_SESSION['login'] = true;
-
+                        $verificarMembresia = Membresia::belognsTo('usuario_id', $usuario->id);                        
+                        
+                        foreach($verificarMembresia as $estado){
+                            
+            
+                            if($estado->estado === '1'){
+                                
+                                $zona = new \DateTimeZone("America/Santiago");      
+                                $fechita = new \DateTime('now', $zona);
+                                
+                                $fechita->add(new DateInterval('P1D')); 
+                                
+                                
+                                $nuevaFecha = new DateTime($estado->f_date);
+                                
+                                $diferencia = $nuevaFecha->diff($fechita);
+                                
+                                if($diferencia->invert === 0){
+                                    $estado->estado = '0';
+                                    
+                                }
+                                $estado->guardar();
+                            }
+                        }
+                        
+                        
                         //redireccion
                         header('Location: /dashboard');
                     }else {

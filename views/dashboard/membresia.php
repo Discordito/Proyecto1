@@ -1,6 +1,18 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
-<h4>Membresia Actual: <?php echo $membresia; ?></h4>
+<h4>Membresia Actual: <?php echo $membresia; ?>.</h4>
+
+<?php if($estado === '1'){?>
+  <h4>Inicio: <?php echo $inicio; ?>.</h4>
+  <h4>Termino: <?php echo $termino; ?>.</h4>
+  <?php if($tiempo !== '' && $tiempo <= 7){ ?>
+    <h4>Quedan: <?php echo $tiempo; ?> dias restantes.</h4>
+    
+  <?php } ?>
+  <style type="text/css">#smart-button-container{
+    display:none;
+  }</style>
+<?php } ?>
 <div id="smart-button-container">
     <div style="text-align: center;">
         <div id="paypal-button-container"></div>
@@ -39,7 +51,8 @@
                 fetch('/membresia', {
                     method: 'POST',
                     body: datos
-                })
+                }).then(actions.redirect('http://localhost:3000/membresia'));
+                
       
                  // Full available details
                 //  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));

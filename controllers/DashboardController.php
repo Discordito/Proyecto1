@@ -2,10 +2,12 @@
 
 namespace Controllers;
 
+use DateInterval;
 use DateTime;
 use DateTimeZone;
 use Model\Estandar;
 use Model\Item;
+use Model\Membresia;
 use Model\Pago;
 use Model\Proyecto;
 use Model\Registro;
@@ -95,16 +97,40 @@ class DashboardController {
     public static function membresia (Router $router){
         session_start();
         $id = $_SESSION['id'];
+        $membresia = 'No tiene membresia activa';
+        $membresiaEstado = '';
+        $membresiaInicio = '';
+        $membresiaTermino = '';
+        $tiempo = '';
         $verificarPago = Pago::where('usuario_id', $id);
+        $verificarmembresia = Membresia::belognsTo('usuario_id', $id);
+        foreach($verificarmembresia as $estado){
+            
+            if($estado->estado === '1'){
+                $membresiaEstado = '1';
+                $membresiaInicio = $estado->i_date;
+                $membresiaTermino = $estado->f_date;
+                $membresia = $estado->membresia;
+
+                $timeZone = new \DateTimeZone("America/Santiago");      
+                $nowDate = new \DateTime('now', $timeZone);
+                $nwFecha = new DateTime($estado->f_date);
+                $dif = $nwFecha->diff($nowDate);
+                
+                if($dif->invert === 1){
+                    $tiempo = $dif->days;
+                    
+                }
+            }else {
+                $membresiaEstado = '0';
+            }            
+        }        
        
-        if(empty($verificarPago)) {
-            $membresia = 'No tiene membresia';
-        } else {
-            $membresia = $verificarPago->descripcion;
-        }
+             
         
-        
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){    
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){   
+            session_start();
+            $datoMembresia = []; 
             //valida que no venga vacio
             if(empty($_POST)){
                 echo json_encode([]);
@@ -112,6 +138,8 @@ class DashboardController {
             }
             $datos = $_POST;
             $datos['usuario_id'] = $_SESSION['id'];            
+            $datoMembresia['usuario_id'] = $_SESSION['id'];            
+            $datoMembresia['membresia'] = $datos['descripcion'];            
             foreach($datos as $key => $value){
                 if($key === 'date'){
                     
@@ -119,20 +147,32 @@ class DashboardController {
                     $fechita = new \DateTime('now', $zona);
                     $fechi = $fechita->format('Y-m-d H:i:s');
                     $datos['date']= $fechi; 
-                                                           
+                    $fechi = $fechita->format('Y-m-d');
+                    $datoMembresia['i_date'] = $fechi;
+                    $fechita->add(new DateInterval('P30D'));  
+                    $f_date =  $fechita->format('Y-m-d');
+                    $datoMembresia['f_date'] = $f_date;  
+                    $datoMembresia['estado'] = 1;  
+
                 }
-            }    
-                 
+            }     
             try{
                 $pago = new Pago($datos);
                 $pago->guardar();
+                $mem = new Membresia($datoMembresia);
+                $mem->guardar();
             } catch (\Throwable $th) {
                 echo 'error';
             }
+            
         }
         $router->render('dashboard/membresia', [
             'titulo' => 'Membresia',
-            'membresia' => $membresia
+            'membresia' => $membresia,
+            'estado' => $membresiaEstado,
+            'inicio' => $membresiaInicio,
+            'termino' => $membresiaTermino,
+            'tiempo' => $tiempo
         ]);
     }
     public static function perfil(Router $router) {
@@ -164,7 +204,7 @@ class DashboardController {
         $router->render('dashboard/perfil', [
             'titulo' => 'Perfil',
             'usuario' => $usuario,
-            'alertas' => $alertas
+            'alertas' => $alertas,
         ]);
     }
     public static function cambiar_password(Router $router){
