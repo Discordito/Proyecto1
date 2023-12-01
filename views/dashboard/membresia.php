@@ -51,7 +51,7 @@
                 fetch('/membresia', {
                     method: 'POST',
                     body: datos
-                }).then(actions.redirect('http://localhost:3000/membresia'));
+                }).then(actions.redirect('https://responsible-affair-ser.domcloud.dev/membresia'));
                 
       
                  // Full available details
