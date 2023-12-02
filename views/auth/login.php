@@ -18,6 +18,7 @@
         <div class="acciones">
             <a href="/crear">Crea tu Cuenta</a>
             <a href="/olvide">Olvide mi Contraseña</a>
+            <a href="/dashboard">Continuar sin Iniciar Sesion</a>
         </div>
     </div>
 </div>

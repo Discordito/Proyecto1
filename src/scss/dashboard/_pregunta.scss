@@ -1,0 +1,12 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.textoConsulta {
+    label {
+        display: block;
+    }
+    textarea {
+        box-sizing: border-box;
+        max-width: 95%;
+    }
+}

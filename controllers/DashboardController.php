@@ -19,22 +19,40 @@ use function PHPSTORM_META\type;
 class DashboardController {
     public static function index(Router $router) {
         session_start();
-        isAuth();
         $estandares = Estandar::all();
         $router->render('dashboard/index',[
             'titulo' => 'Estandares',
             'estandares' => $estandares
         ]);
     }
+    public static function pregunta(Router $router) {
+        session_start();
+        isAuth();
+        $id = $_GET['id'];
+        $items = Item::belognsTo('estandarid', $id);
+        $router->render('dashboard/pregunta',[
+            'titulo' => 'Preguntar',
+            'items' => $items
+        ]);
+    }
     public static function estandar(Router $router){
         session_start();
         $suma = 0;
         $ro = [];
+        $estadoMembresia = 0;
+        $idUsuario = 0;
         $registro = new Registro();
         $id = $_GET['id'];
         $estandares = Estandar::where('id', $id);
         $items = Item::belognsTo('estandarid', $id);
-        
+        //datos para saber si tiene membresia
+        $membresia = Membresia::belognsTo('usuario_id', $_SESSION['id']);
+        foreach($membresia as $m){
+            if($m->estado === '1'){
+                $idEstandar = $id;
+                $estadoMembresia = $m->estado;
+            }
+        }       
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){  
             $ro = $_POST;      
@@ -77,7 +95,9 @@ class DashboardController {
             'titulo' => $estandares->nombre,
             'id' => $estandares,
             'items' => $items,
-            'alertas' => $alertas
+            'alertas' => $alertas,
+            'estado' => $estadoMembresia,
+            'idEstandar' => $idEstandar
         ]);
     }
     public static function registro(Router $router){
