@@ -8,11 +8,18 @@
     
     <nav class="sidebar-nav">
         <a class="<?php echo ($titulo === 'Estandares') ? 'activo' : ''; ?>" href="/dashboard">Estandares</a>
-        <a class="<?php echo ($titulo === 'Perfil') ? 'activo' : ''; ?>" href="/perfil">Perfil</a>
-        <a class="<?php echo ($titulo === 'Registro') ? 'activo' : ''; ?>" href="/registro">Registro</a>
-        <a class="<?php echo ($titulo === 'Membresia') ? 'activo' : ''; ?>" href="/membresia">Membresia</a>
+        <?php if(!empty($_SESSION['id'])){?>
+            <a class="<?php echo ($titulo === 'Perfil') ? 'activo' : ''; ?>" href="/perfil">Perfil</a>
+            <a class="<?php echo ($titulo === 'Registro') ? 'activo' : ''; ?>" href="/registro">Registro</a>
+            <a class="<?php echo ($titulo === 'Membresia') ? 'activo' : ''; ?>" href="/membresia">Membresia</a>
+            <a class="<?php echo ($titulo === 'Preguntas') ? 'activo' : ''; ?>" href="/preguntas">Preguntas</a>
+        <?php }?>
     </nav>
     <div class="cerrar-sesion-mobile">
-        <a href="/logout" class="cerrar-sesion">Cerrar Sesión</a>
+    <a href="/" class="cerrar-sesion">Iniciar Sesión</a>  
+        <?php if(!empty($_SESSION['id'])){?>        
+            <a href="/logout" class="cerrar-sesion">Cerrar Sesión</a>        
+        <?php }?>
     </div>
+    
 </aside>

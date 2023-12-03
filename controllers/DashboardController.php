@@ -9,6 +9,7 @@ use Model\Estandar;
 use Model\Item;
 use Model\Membresia;
 use Model\Pago;
+use Model\Pregunta;
 use Model\Proyecto;
 use Model\Registro;
 use Model\Usuario;
@@ -28,11 +29,45 @@ class DashboardController {
     public static function pregunta(Router $router) {
         session_start();
         isAuth();
+        $pregunta = [];
         $id = $_GET['id'];
         $items = Item::belognsTo('estandarid', $id);
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){ 
+            $pregunta['descripcion'] = $_POST['consulta'];
+            $pregunta['usuarios_id'] = $_SESSION['id'];
+            $pregunta['estandar_id'] = $id;
+            $hash = md5(uniqid());
+            $pregunta['url'] = $hash;
+
+            $pre = new Pregunta($pregunta);
+            
+            $pre->guardar();
+            header('Location: /pregunta_usuario?id=' . $pre->url);
+        }
         $router->render('dashboard/pregunta',[
             'titulo' => 'Preguntar',
-            'items' => $items
+            'items' => $items,
+            'alertas' => $alerta
+        ]);
+    }
+    public static function pregunta_usuario(Router $router){
+        session_start();
+        isAuth();
+        
+        $router->render('dashboard/pregunta_usuario',[
+            'titulo' => 'pregunta_usuarios'
+        ]);
+    }
+    public static function preguntas(Router $router) {
+        session_start();
+        isAuth();
+        $pregunta = [];
+        $id = $_GET['id'];
+        $preguntas = Pregunta::belognsTo('usuarios_id', $_SESSION['id']);
+        
+        $router->render('dashboard/preguntas',[
+            'titulo' => 'Preguntas',
+            'preguntas' => $preguntas
         ]);
     }
     public static function estandar(Router $router){
@@ -102,6 +137,7 @@ class DashboardController {
     }
     public static function registro(Router $router){
         session_start();
+        isAuth();
         $id = $_SESSION['id'];
         $registros = Registro::belognsTo('usuarios_id', $id);
         foreach($registros as $reg){
@@ -116,6 +152,7 @@ class DashboardController {
     }
     public static function membresia (Router $router){
         session_start();
+        isAuth();
         $id = $_SESSION['id'];
         $membresia = 'No tiene membresia activa';
         $membresiaEstado = '';

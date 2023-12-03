@@ -46,6 +46,9 @@ $router->post('/registro', [DashboardController::class, 'registro']);
 $router->get('/membresia', [DashboardController::class, 'membresia']);
 $router->post('/membresia', [DashboardController::class, 'membresia']);
 $router->get('/pregunta', [DashboardController::class, 'pregunta']);
+$router->post('/pregunta', [DashboardController::class, 'pregunta']);
+$router->get('/preguntas', [DashboardController::class, 'preguntas']);
+$router->get('/pregunta_usuario', [DashboardController::class, 'pregunta_usuario']);
 
 //api para las tareas
 $router->get('/api/tareas', [TareaController::class, 'index']);

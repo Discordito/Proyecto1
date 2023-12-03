@@ -1,7 +1,5 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
-
-
 <ul class="listado-items" id="listado-items">    
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     <form class="formulario" action="" method="POST">
@@ -35,11 +33,14 @@
                 </div>
             </li>        
         <?php } ?>
-        <?php $_SESSION['tiempo'] = '$mydata' ?>
         <div class="botones">
             <input type="button" id="respondido" class="comprobar" value="Comprobar">   
-            <a href="/dashboard" class="enlace"> Volver</a>     
-            <input type="submit" id="registrar" class="comprobar" value="Guardar">         
+            <a href="/dashboard" class="enlace"> Volver</a>  
+            <?php if(!empty($_SESSION['id'])){?>
+                <input type="submit" id="registrar" class="comprobar" value="Guardar">  
+            <?php }?>
+       
+                   
         </div>          
     </form>    
 </ul>

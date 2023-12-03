@@ -1,21 +1,14 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 <ul class="listado-items" id="listado-items">    
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
-    <?php foreach($items as $item){ ?>
+    <?php foreach($preguntas as $p){ ?>
         <li class="estandar">
             <p>
-                <?php echo $item->descripcion; ?>
+                <?php echo $p->descripcion; ?>
             </p> 
         </li>    
     <?php } ?>      
 </ul>
-<form action="" method="POST" class="formulario">
-    <div class="textoConsulta">
-        <label for="consulta">Escriba a continuacion su consulta.</label>
-        <textarea name="consulta" id="consulta"  cols="100" rows="7">></textarea>
-    </div>
-    <input type="submit" class="boton" value="Realizar Pregunta">
-</form>
 <a href="/dashboard" class="enlace"> Volver</a>    
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>

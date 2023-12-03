@@ -1,5 +1,6 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
+<?php  ?>
 <ul class="listado-proyectos">
     <?php foreach($estandares as $estandar){ ?>
         <li class="proyecto">

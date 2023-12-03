@@ -6,6 +6,13 @@
 </div>
 
 <div class="barra">
-    <p>Hola: <span> <?php echo $_SESSION['nombre'];?> </span></p>
-    <a href="/logout" class="cerrar-sesion">Cerrar Sesión</a>
+    <?php if(empty($_SESSION['id'])){?>
+        <p>Bienvenido.</p>
+        <a href="/" class="cerrar-sesion">Iniciar Sesión</a>
+    <?php }?>
+    <?php if(!empty($_SESSION['id'])){?>
+        <p>Hola: <span> <?php echo $_SESSION['nombre'];?> </span></p>
+        <a href="/logout" class="cerrar-sesion">Cerrar Sesión</a>
+    <?php }?>
+    
 </div>
