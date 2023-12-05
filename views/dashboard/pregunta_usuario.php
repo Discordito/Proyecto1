@@ -1,4 +1,5 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
+<p><?php echo $descripcion ?></p>
 
 <a href="/preguntas" class="enlace"> Volver</a>    
 

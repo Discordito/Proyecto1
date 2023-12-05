@@ -13,10 +13,16 @@
             <a class="<?php echo ($titulo === 'Registro') ? 'activo' : ''; ?>" href="/registro">Registro</a>
             <a class="<?php echo ($titulo === 'Membresia') ? 'activo' : ''; ?>" href="/membresia">Membresia</a>
             <a class="<?php echo ($titulo === 'Preguntas') ? 'activo' : ''; ?>" href="/preguntas">Preguntas</a>
+            <?php if($_SESSION['rol'] === "Administrador"){?>
+                <a class="<?php echo ($titulo === 'Administrar') ? 'activo' : ''; ?>" href="/administrar">Administrar</a>
+            <?php }?>            
         <?php }?>
     </nav>
     <div class="cerrar-sesion-mobile">
-    <a href="/" class="cerrar-sesion">Iniciar Sesión</a>  
+    <?php if(empty($_SESSION['id'])){?>        
+        <p>Bienvenido.</p>
+        <a href="/" class="cerrar-sesion">Iniciar Sesión</a>
+    <?php }?>
         <?php if(!empty($_SESSION['id'])){?>        
             <a href="/logout" class="cerrar-sesion">Cerrar Sesión</a>        
         <?php }?>

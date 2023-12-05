@@ -11,6 +11,8 @@
 </ul>
 <form action="" method="POST" class="formulario">
     <div class="textoConsulta">
+        <label for="titulo">Titulo de su consulta.</label>
+        <input type="text" id="titulo" name="titulo">
         <label for="consulta">Escriba a continuacion su consulta.</label>
         <textarea name="consulta" id="consulta"  cols="100" rows="7">></textarea>
     </div>

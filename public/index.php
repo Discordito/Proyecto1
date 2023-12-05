@@ -2,9 +2,11 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\AdminController;
 use Controllers\LoginController;
 use MVC\Router;
 use Controllers\DashboardController;
+use Controllers\PreguntaController;
 use Controllers\TareaController;
 
 $router = new Router();
@@ -50,8 +52,12 @@ $router->post('/pregunta', [DashboardController::class, 'pregunta']);
 $router->get('/preguntas', [DashboardController::class, 'preguntas']);
 $router->get('/pregunta_usuario', [DashboardController::class, 'pregunta_usuario']);
 
+//Adminitrador
+$router->get('/administrar', [AdminController::class, 'index']);
+
 //api para las tareas
-$router->get('/api/tareas', [TareaController::class, 'index']);
+$router->get('/api/preguntas', [PreguntaController::class, 'index']);
+$router->post('/api/preguntas/actualizar', [PreguntaController::class, 'actualizar']);
 $router->post('/api/tarea', [TareaController::class, 'crear']);
 $router->post('/api/tarea/actualizar', [TareaController::class, 'actualizar']);
 $router->post('/api/tarea/eliminar', [TareaController::class, 'eliminar']);

@@ -5,6 +5,7 @@ use Clases\Email;
 use DateInterval;
 use DateTime;
 use Model\Membresia;
+use Model\Rol;
 use Model\Usuario;
 use MVC\Router;
 
@@ -30,6 +31,9 @@ class LoginController {
                         $_SESSION['nombre'] = $usuario->nombre;
                         $_SESSION['email'] = $usuario->email;
                         $_SESSION['login'] = true;
+
+                        $rol = Rol::where('usuarios_id', $usuario->id);
+                        $_SESSION['rol'] = $rol->nombre;
                         $verificarMembresia = Membresia::belognsTo('usuario_id', $usuario->id);                        
                         
                         foreach($verificarMembresia as $estado){

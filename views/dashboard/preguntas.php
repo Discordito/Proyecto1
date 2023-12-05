@@ -4,7 +4,8 @@
     <?php foreach($preguntas as $p){ ?>
         <li class="estandar">
             <p>
-                <?php echo $p->descripcion; ?>
+                <?php echo $p->titulo; ?>
+                <a href="">Acceder</a>
             </p> 
         </li>    
     <?php } ?>      

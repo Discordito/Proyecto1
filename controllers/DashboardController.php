@@ -38,6 +38,7 @@ class DashboardController {
             $pregunta['estandar_id'] = $id;
             $hash = md5(uniqid());
             $pregunta['url'] = $hash;
+            $pregunta['titulo'] = $_POST['titulo'];
 
             $pre = new Pregunta($pregunta);
             
@@ -54,8 +55,16 @@ class DashboardController {
         session_start();
         isAuth();
         
+        $url = $_GET['id'];
+        if(!$url) header('Location: /dashboard');
+        $pregunta = Pregunta::where('url', $url);
+        if($pregunta->usuarios_id !== $_SESSION['id']){
+            header('Location: /dashboard');
+        }
+
         $router->render('dashboard/pregunta_usuario',[
-            'titulo' => 'pregunta_usuarios'
+            'titulo' => $pregunta->titulo,
+            'descripcion' => $pregunta->descripcion
         ]);
     }
     public static function preguntas(Router $router) {

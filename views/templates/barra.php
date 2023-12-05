@@ -6,7 +6,7 @@
 </div>
 
 <div class="barra">
-    <?php if(empty($_SESSION['id'])){?>
+    <?php if(empty($_SESSION['id'])){?>        
         <p>Bienvenido.</p>
         <a href="/" class="cerrar-sesion">Iniciar Sesión</a>
     <?php }?>
