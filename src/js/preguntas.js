@@ -124,7 +124,7 @@
         datos.append('usuarios_id', usuarios_id);
         
         try {
-            const url = 'http://localhost:3000/api/preguntas/actualizar';
+            const url = 'https://responsible-affair-ser.domcloud.dev/api/preguntas/actualizar';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -178,7 +178,7 @@
         datos.append('usuarios_id', usuarios_id);
 
         try {
-            const url = 'http://localhost:3000/api/preguntas/responder';
+            const url = 'https://responsible-affair-ser.domcloud.dev/api/preguntas/responder';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -189,7 +189,7 @@
                 limpiarRespuesta();
             }
         } catch (error) {
-            
+            console.log(error);
         }
     }
     function mostrarAlerta(mensaje, tipo, referencia){
