@@ -58,6 +58,7 @@ $router->get('/administrar', [AdminController::class, 'index']);
 //api para las tareas
 $router->get('/api/preguntas', [PreguntaController::class, 'index']);
 $router->post('/api/preguntas/actualizar', [PreguntaController::class, 'actualizar']);
+$router->post('/api/preguntas/responder', [PreguntaController::class, 'responder']);
 $router->post('/api/tarea', [TareaController::class, 'crear']);
 $router->post('/api/tarea/actualizar', [TareaController::class, 'actualizar']);
 $router->post('/api/tarea/eliminar', [TareaController::class, 'eliminar']);

@@ -74,6 +74,9 @@
             btnResponder.classList.add('responder-pregunta');
             btnResponder.dataset.idPregunta = pregunta.id;
             btnResponder.textContent = 'Responder';
+            btnResponder.onclick = function(){
+                guardarRespuesta({...pregunta});
+            }
 
             opcionesDiv.appendChild(btnEstado);
             opcionesDiv.appendChild(btnResponder);
@@ -143,6 +146,52 @@
         }
         
     }
+    function guardarRespuesta(pregunta){
+        verificar(pregunta);
+        let variable = '';
+        let textarea = document.createElement("textarea");
+        const btnGuardar = document.createElement('BUTTON');
+        btnGuardar.textContent = 'Guardar';
+        const preg = document.querySelectorAll('.pregunta');
+        preg.forEach(p => {
+            if(p.dataset.preguntaId === pregunta['id']){
+                p.appendChild(textarea);
+                p.appendChild(btnGuardar);
+                btnGuardar.addEventListener('click', function(){
+                    pregunta['respuesta'] = textarea.value;
+                    responder(pregunta);
+                });
+            }            
+        });        
+    }
+    async function responder(pregunta){        
+
+        const {descripcion, estado, estandar_id, id, respuesta, titulo, url, usuarios_id} = pregunta;
+        const datos = new FormData();
+        datos.append('id', id);
+        datos.append('titulo', titulo);
+        datos.append('descripcion', descripcion);
+        datos.append('respuesta', respuesta);
+        datos.append('url', url);
+        datos.append('estado', estado);
+        datos.append('estandar_id', estandar_id);
+        datos.append('usuarios_id', usuarios_id);
+
+        try {
+            const url = 'http://localhost:3000/api/preguntas/responder';
+            const respuesta = await fetch(url, {
+                method: 'POST',
+                body: datos
+            });
+            const resultado = await respuesta.json();
+            if(resultado.respuesta.tipo === 'exito'){
+                mostrarAlerta(resultado.respuesta.mensaje, resultado.respuesta.tipo, document.querySelector('.contenedor-preguntas'));
+                limpiarRespuesta();
+            }
+        } catch (error) {
+            
+        }
+    }
     function mostrarAlerta(mensaje, tipo, referencia){
         //previene la creacion de multiples alertas
         const alertaPrevia = document.querySelector('.alerta');
@@ -165,5 +214,25 @@
         while(listadoTareas.firstChild){
             listadoTareas.removeChild(listadoTareas.firstChild);
         }
+    }
+    function limpiarRespuesta(){
+        const pregunta = document.querySelectorAll('.pregunta');
+        pregunta.forEach(p => {
+            if(p.childNodes.length > 2){
+                p.removeChild(p.lastChild);
+                p.removeChild(p.lastChild);
+            }            
+        })        
+    }
+    function verificar(pregunta){
+        const pre = document.querySelectorAll('.pregunta');
+        pre.forEach(p => {            
+            if(p.dataset.preguntaId === pregunta['id']){
+                if(p.childNodes.length > 2){
+                    p.removeChild(p.lastChild);
+                    p.removeChild(p.lastChild);
+                }  
+            }            
+        })          
     }
 })();
