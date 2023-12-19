@@ -5689,12 +5689,588 @@
 const moment = require("moment/moment");
 
 (function(){  
+
+    async function obtenerRecomendaciones(idItem){
+        
+        try {
+            const url = '/api/recomendaciones?id=' + idItem;
+            const respuesta = await fetch(url);            
+            const resultado = await respuesta.json();
+            const { recomendaciones } = resultado;
+            mostrarRecomendaciones(recomendaciones);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    function mostrarRecomendaciones(recomendaciones){
+        const respuestas = document.querySelectorAll('#listado-items input[type="radio"]:checked');
+        const contenedorRecomendacion = document.querySelector('.listado-recomendaciones');
+        const textoRecomendacion = document.createElement('P');
+        const textoRecomendacion1 = document.createElement('P');
+        const textoRecomendacion2 = document.createElement('P');
+        const textoRecomendacion3 = document.createElement('P');
+        const textoRecomendacion4 = document.createElement('P');
+        const textoRecomendacion5 = document.createElement('P');
+        const textoRecomendacion6 = document.createElement('P');
+        const textoRecomendacion7 = document.createElement('P');
+        const textoRecomendacion8 = document.createElement('P');
+        const textoRecomendacion9 = document.createElement('P');
+        textoRecomendacion.classList.add('recomendacion-texto');
+        textoRecomendacion1.classList.add('recomendacion-texto');
+        textoRecomendacion2.classList.add('recomendacion-texto');
+        textoRecomendacion3.classList.add('recomendacion-texto');
+        textoRecomendacion4.classList.add('recomendacion-texto');
+        textoRecomendacion5.classList.add('recomendacion-texto');
+        textoRecomendacion6.classList.add('recomendacion-texto');
+        textoRecomendacion7.classList.add('recomendacion-texto');
+        textoRecomendacion8.classList.add('recomendacion-texto');
+        textoRecomendacion9.classList.add('recomendacion-texto');
+        
+
+        recomendaciones.forEach( reco => {
+            reco.forEach( r => {
+                if(r.item_id === "1"){if(r.opcion === "1"){
+                        respuestas.forEach( re => {
+                            if(re.name === "1"){if(re.id === "respuesta1"){
+                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion);
+                                console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "1"){if(re.id === "respuesta2"){
+                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "1"){if(re.id === "respuesta3"){
+                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "1"){if(re.id === "respuesta4"){
+                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "1"){if(re.id === "respuesta5"){
+                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "2"){ if(r.opcion === "1"){
+                        respuestas.forEach( re => {
+                            if(re.name === "2"){if(re.id === "respuesta1"){
+                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion1);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "2"){if(re.id === "respuesta2"){
+                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion1);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "2"){if(re.id === "respuesta3"){
+                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion1);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "2"){if(re.id === "respuesta4"){
+                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion1);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "2"){if(re.id === "respuesta5"){
+                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion1);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "3"){if(r.opcion === "1"){
+                        respuestas.forEach( re => {
+                            if(re.name === "3"){if(re.id === "respuesta1"){
+                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion2);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "3"){if(re.id === "respuesta2"){
+                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion2);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "3"){ if(re.id === "respuesta3"){
+                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion2);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "3"){if(re.id === "respuesta4"){
+                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion2);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "3"){if(re.id === "respuesta5"){
+                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion2);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "4"){if(r.opcion === "1"){
+                        respuestas.forEach( re => {
+                            if(re.name === "4"){if(re.id === "respuesta1"){
+                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion3);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "4"){if(re.id === "respuesta2"){
+                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion3);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "4"){if(re.id === "respuesta3"){
+                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion3);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "4"){if(re.id === "respuesta4"){
+                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion3);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "4"){if(re.id === "respuesta5"){
+                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion3);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "5"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "5"){if(re.id === "respuesta1"){
+                            textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion4);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "5"){if(re.id === "respuesta2"){
+                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion4);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "5"){if(re.id === "respuesta3"){
+                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion4);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "5"){if(re.id === "respuesta4"){
+                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion4);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "5"){if(re.id === "respuesta5"){
+                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion4);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "6"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "6"){if(re.id === "respuesta1"){
+                            textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion5);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "6"){if(re.id === "respuesta2"){
+                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion5);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "6"){if(re.id === "respuesta3"){
+                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion5);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "6"){if(re.id === "respuesta4"){
+                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion5);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "6"){if(re.id === "respuesta5"){
+                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion5);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "7"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "7"){if(re.id === "respuesta1"){
+                            textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion6);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "7"){if(re.id === "respuesta2"){
+                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion6);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "7"){if(re.id === "respuesta3"){
+                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion6);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "7"){if(re.id === "respuesta4"){
+                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion6);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "7"){if(re.id === "respuesta5"){
+                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion6);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "8"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "8"){if(re.id === "respuesta1"){
+                            textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion7);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "8"){if(re.id === "respuesta2"){
+                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion7);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "8"){if(re.id === "respuesta3"){
+                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion7);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "8"){if(re.id === "respuesta4"){
+                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion7);
+                                    console.log(r.descripcion);
+
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "8"){if(re.id === "respuesta5"){
+                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion7);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "9"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "9"){if(re.id === "respuesta1"){
+                            textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion8);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "9"){if(re.id === "respuesta2"){
+                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion8);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "9"){if(re.id === "respuesta3"){
+                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion8);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "9"){if(re.id === "respuesta4"){
+                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion8);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "9"){if(re.id === "respuesta5"){
+                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion8);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "10"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "10"){if(re.id === "respuesta1"){
+                            textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion9);
+                                console.log(r.descripcion);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "10"){if(re.id === "respuesta2"){
+                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion9);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "10"){if(re.id === "respuesta3"){
+                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion9);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "10"){if(re.id === "respuesta4"){
+                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion9);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "5"){
+                        respuestas.forEach( re => {
+                            if(re.name === "10"){if(re.id === "respuesta5"){
+                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion9);
+                                    console.log(r.descripcion);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+            
+            })            
+        })
+          
+            
+    }
+    function limpiarRecomendacion() {
+        const recomendacionAnterior = document.querySelector('.listado-recomendaciones');
+        const parrafo = document.getElementsByClassName('recomendacion-texto');
+        console.log(parrafo);
+        if(parrafo.length !== 0){
+            recomendacionAnterior.removeChild(recomendacionAnterior.lastElementChild);  
+            recomendacionAnterior.removeChild(recomendacionAnterior.lastElementChild);  
+            recomendacionAnterior.removeChild(recomendacionAnterior.lastElementChild);  
+            recomendacionAnterior.removeChild(recomendacionAnterior.lastElementChild);  
+        }
+        
+               
+    }
     //estandares
     let res1 = 0;
     
     const respuesta = document.querySelector('#respondido');
     respuesta.addEventListener('click', function() {
+        const algo = window.location.search;
+        const params = new URLSearchParams(algo);
+        const idItem = params.get('id');
+        obtenerRecomendaciones(idItem);
+        
         guardarRespuestas();
+        limpiarRecomendacion();  
     });
     function guardarRespuestas() {
         const pregunta = document.querySelectorAll('#listado-items input[type="radio"]:checked');
@@ -5736,7 +6312,6 @@ const moment = require("moment/moment");
         contenedorRespuesta.appendChild(textoRespuesta);
         limpiarRespuesta();
         res1=0;
-        
     }
     function limpiarRespuesta() {
         const respuestaAnterior = document.getElementById("puntaje");

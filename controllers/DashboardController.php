@@ -11,6 +11,7 @@ use Model\Membresia;
 use Model\Pago;
 use Model\Pregunta;
 use Model\Proyecto;
+use Model\Recomendacion;
 use Model\Registro;
 use Model\Usuario;
 use MVC\Router;
@@ -80,16 +81,34 @@ class DashboardController {
             'preguntas' => $preguntas
         ]);
     }
+    public static function recomendaciones(){
+        $id = $_GET['id'];
+        $items = Item::belognsTo('estandarid', $id);
+        foreach($items as $i){
+            $recomendaciones[] = $i->id; 
+        }
+        foreach($recomendaciones as $r){
+            $recomendacion[] = Recomendacion::belognsTo('item_id', $r);
+        }
+        echo json_encode(['recomendaciones' => $recomendacion]);
+    }
     public static function estandar(Router $router){
         session_start();
         $suma = 0;
         $ro = [];
+        $recomendaciones = [];
         $estadoMembresia = 0;
         $idUsuario = 0;
         $registro = new Registro();
         $id = $_GET['id'];
         $estandares = Estandar::where('id', $id);
         $items = Item::belognsTo('estandarid', $id);
+        foreach($items as $i){
+            $recomendaciones[] = $i->id; 
+        }
+        foreach($recomendaciones as $r){
+            $recomendacion[] = Recomendacion::belognsTo('item_id', $r);
+        }
         //datos para saber si tiene membresia
         $membresia = Membresia::belognsTo('usuario_id', $_SESSION['id']);
         foreach($membresia as $m){
@@ -129,7 +148,6 @@ class DashboardController {
                     $registro->puntaje = $suma;
                 }
                 // $registro->date = $key;
-                
             }             
             // var_dump($registro);
             $registro->guardar();
@@ -142,7 +160,9 @@ class DashboardController {
             'items' => $items,
             'alertas' => $alertas,
             'estado' => $estadoMembresia,
-            'idEstandar' => $idEstandar
+            'idEstandar' => $idEstandar,
+            'recomendaciones' => $recomendaciones,
+            'recomendacion' => $recomendacion
         ]);
     }
     public static function registro(Router $router){

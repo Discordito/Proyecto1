@@ -1,5 +1,4 @@
 (function(){
-
     obtenerPreguntas();
     let preguntas = [];
     let filtradas = [];

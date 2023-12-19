@@ -5,6 +5,7 @@ namespace Controllers;
 use Model\Pregunta;
 
 class PreguntaController {
+    
     public static function index(){
         $preguntas = Pregunta::all();
         echo json_encode(['preguntas' => $preguntas]);

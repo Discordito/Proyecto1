@@ -58,6 +58,7 @@ $router->get('/administrar', [AdminController::class, 'index']);
 
 //api para las tareas
 $router->get('/api/preguntas', [PreguntaController::class, 'index']);
+$router->get('/api/recomendaciones', [DashboardController::class, 'recomendaciones']);
 $router->post('/api/preguntas/actualizar', [PreguntaController::class, 'actualizar']);
 $router->post('/api/preguntas/responder', [PreguntaController::class, 'responder']);
 

@@ -1,22 +1,22 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
-
+<div class="listado-recomendaciones"></div>
 <ul class="listado-items" id="listado-items">    
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     <form class="formulario" action="" method="POST">
     <input type="hidden" id="mydata" name="a"> 
         <?php foreach($items as $item){ ?>
-            <li class="estandar">
+            <li class="estandar"  >
                 <p>
                     <?php echo $item->descripcion; ?>
                 </p>                            
-                <div class="preguntas">                        
+                <div class="preguntas" id="preguntas">                        
                     <div class="pregunta">
                         <label for="respuesta1">Muy Poco</label>
                         <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="20" checked/>
                     </div>
                     <div class="pregunta">
                         <label for="respuesta2">Poco</label>
-                        <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="40"/>    
+                        <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="40"/> 
                     </div>
                     <div class="pregunta">
                         <label for="respuesta3">Normal</label>
@@ -24,11 +24,11 @@
                     </div>
                     <div class="pregunta">
                         <label for="respuesta4">Mucho</label>
-                        <input type="radio" id="respuesta4" name="<?php echo $item->id; ?>" value="80"/>   
+                        <input type="radio" id="respuesta4" name="<?php echo $item->id; ?>" value="80"/>  
                     </div>
                     <div class="pregunta">
                         <label for="respuesta5">Demasiado</label>
-                        <input type="radio" id="respuesta5" name="<?php echo $item->id; ?>" value="100"/>                              
+                        <input type="radio" id="respuesta5" name="<?php echo $item->id; ?>" value="100"/>
                     </div>                  
                 </div>
             </li>        
@@ -39,8 +39,6 @@
             <?php if(!empty($_SESSION['id'])){?>
                 <input type="submit" id="registrar" class="comprobar" value="Guardar">  
             <?php }?>
-       
-                   
         </div>          
     </form>    
 </ul>
