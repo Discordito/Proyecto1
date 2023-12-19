@@ -64,7 +64,8 @@ class DashboardController {
 
         $router->render('dashboard/pregunta_usuario',[
             'titulo' => $pregunta->titulo,
-            'descripcion' => $pregunta->descripcion
+            'descripcion' => $pregunta->descripcion,
+            'respuesta' => $pregunta->respuesta
         ]);
     }
     public static function preguntas(Router $router) {
@@ -239,6 +240,12 @@ class DashboardController {
             'inicio' => $membresiaInicio,
             'termino' => $membresiaTermino,
             'tiempo' => $tiempo
+        ]);
+    }
+    public static function donaciones (Router $router){
+        session_start();
+        $router->render('dashboard/donaciones', [
+            'titulo' => 'Donaciones'
         ]);
     }
     public static function perfil(Router $router) {

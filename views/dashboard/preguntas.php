@@ -2,11 +2,9 @@
 <ul class="listado-items" id="listado-items">    
     <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
     <?php foreach($preguntas as $p){ ?>
-        <li class="estandar">
-            <p>
-                <?php echo $p->titulo; ?>
-                <a href="">Acceder</a>
-            </p> 
+        <li class="listado-pregunta">
+            <p><?php echo $p->titulo; ?></p> 
+            <a href="/pregunta_usuario?id=<?php echo $p->url ;?>">Acceder</a>
         </li>    
     <?php } ?>      
 </ul>

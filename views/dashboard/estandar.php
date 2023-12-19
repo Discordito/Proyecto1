@@ -45,11 +45,11 @@
     </form>    
 </ul>
 <div id="puntaje" class="puntaje">
-    <p>Tu puntaje es: </p>
+    <p>Tu puntaje es: </p>    
 </div>
 <?php if($estado === '1'){?>
-    <a href="/pregunta?id=<?php echo $idEstandar;?>">Hacer una pregunta</a>
-<?php } ?>
+        <a href="/pregunta?id=<?php echo $idEstandar;?>">Hacer una pregunta</a>
+    <?php } ?>
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
 <?php $script .= '

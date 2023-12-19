@@ -1,0 +1,15 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.donaciones {
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    .boton-donacion {
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

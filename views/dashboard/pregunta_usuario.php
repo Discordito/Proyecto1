@@ -1,7 +1,13 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 <p><?php echo $descripcion ?></p>
 
-<a href="/preguntas" class="enlace"> Volver</a>    
+<h3>Respuesta:</h3> 
+<?php if($respuesta === ''){?>
+    <p>Espere la respuesta del administrador.</p>
+<?php } ?>
+<p><?php echo $respuesta; ?></p>
+<a href="/preguntas" class="enlace"> Volver</a>   
+
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
 <?php $script .= '

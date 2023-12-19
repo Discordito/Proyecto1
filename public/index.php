@@ -51,6 +51,7 @@ $router->get('/pregunta', [DashboardController::class, 'pregunta']);
 $router->post('/pregunta', [DashboardController::class, 'pregunta']);
 $router->get('/preguntas', [DashboardController::class, 'preguntas']);
 $router->get('/pregunta_usuario', [DashboardController::class, 'pregunta_usuario']);
+$router->get('/donaciones', [DashboardController::class, 'donaciones']);
 
 //Adminitrador
 $router->get('/administrar', [AdminController::class, 'index']);
@@ -59,9 +60,6 @@ $router->get('/administrar', [AdminController::class, 'index']);
 $router->get('/api/preguntas', [PreguntaController::class, 'index']);
 $router->post('/api/preguntas/actualizar', [PreguntaController::class, 'actualizar']);
 $router->post('/api/preguntas/responder', [PreguntaController::class, 'responder']);
-$router->post('/api/tarea', [TareaController::class, 'crear']);
-$router->post('/api/tarea/actualizar', [TareaController::class, 'actualizar']);
-$router->post('/api/tarea/eliminar', [TareaController::class, 'eliminar']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

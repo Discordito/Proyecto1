@@ -1,14 +1,14 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
+  <div class="membresia">
+  <p><label>Membresia Actual: </label><?php echo $membresia;?>.</p>
 
-<h4>Membresia Actual: <?php echo $membresia; ?>.</h4>
-
-<?php if($estado === '1'){?>
-  <h4>Inicio: <?php echo $inicio; ?>.</h4>
-  <h4>Termino: <?php echo $termino; ?>.</h4>
-  <?php if($tiempo !== '' && $tiempo <= 7){ ?>
-    <h4>Quedan: <?php echo $tiempo; ?> dias restantes.</h4>
-    
+  <?php if($estado === '1'){?>
+    <p> <label>Inicio: </label><?php echo $inicio; ?>.</p>
+    <p><label> Termino: </label><?php echo $termino; ?>.</p>
+    <?php if($tiempo !== '' && $tiempo <= 7){ ?>
+      <p>Quedan: <?php echo $tiempo; ?> dias restantes.</p>      
   <?php } ?>
+</div>
   <style type="text/css">#smart-button-container{
     display:none;
   }</style>

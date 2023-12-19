@@ -10,3 +10,16 @@
         max-width: 95%;
     }
 }
+.listado-pregunta {
+    list-style: none;
+    text-align: center; 
+    background-color: lighten(v.$grisOscuro, 50%);
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+   
+}
