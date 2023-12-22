@@ -1,11 +1,14 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
-<p><?php echo $descripcion ?></p>
+<div class="pregunta-usuario">
+    <p><?php echo $descripcion ?></p>
 
-<h3>Respuesta:</h3> 
-<?php if($respuesta === ''){?>
-    <p>Espere la respuesta del administrador.</p>
-<?php } ?>
-<p><?php echo $respuesta; ?></p>
+    <h3>Respuesta.</h3> 
+
+    <?php if($respuesta === ''){?>
+        <p>Espere la respuesta del administrador.</p>
+    <?php } ?>
+    <p><?php echo $respuesta; ?></p>
+</div>
 <a href="/preguntas" class="enlace"> Volver</a>   
 
 

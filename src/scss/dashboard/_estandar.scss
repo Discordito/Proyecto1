@@ -45,15 +45,20 @@
         }
     }        
 }
-p {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
+p{
+    padding-top: 1rem;  
     color: v.$negro;
-    @include m.tablet {
-        justify-content: center;
-    }
-} 
+}
+.listado-recomendaciones{
+    p {
+        display: flex;
+        justify-content: center;              
+        @include m.tablet {        
+            justify-content: left;
+        }
+    } 
+}
+
 .puntaje {
     .puntaje-texto {
         color: v.$negro;

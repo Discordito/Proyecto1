@@ -5732,7 +5732,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "1"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta1"){
-                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
                                 console.log(r.descripcion);
                                 }
@@ -5742,7 +5742,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta2"){
-                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
                                     console.log(r.descripcion);
                                 }
@@ -5752,7 +5752,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta3"){
-                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
                                     console.log(r.descripcion);
                                 }
@@ -5762,7 +5762,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta4"){
-                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
                                     console.log(r.descripcion);
                                 }
@@ -5772,7 +5772,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta5"){
-                                textoRecomendacion.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
                                     console.log(r.descripcion);
                                 }
@@ -5783,7 +5783,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "2"){ if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta1"){
-                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
                                     console.log(r.descripcion);
                                 }
@@ -5793,7 +5793,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta2"){
-                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
                                     console.log(r.descripcion);
                                 }
@@ -5803,7 +5803,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta3"){
-                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
                                     console.log(r.descripcion);
                                 }
@@ -5813,7 +5813,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta4"){
-                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
                                     console.log(r.descripcion);
                                 }
@@ -5823,7 +5823,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta5"){
-                                textoRecomendacion1.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
                                     console.log(r.descripcion);
                                 }
@@ -5834,7 +5834,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "3"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta1"){
-                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
                                     console.log(r.descripcion);
                                 }
@@ -5844,7 +5844,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta2"){
-                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
                                     console.log(r.descripcion);
                                 }
@@ -5854,7 +5854,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){ if(re.id === "respuesta3"){
-                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
                                     console.log(r.descripcion);
                                 }
@@ -5864,7 +5864,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta4"){
-                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
                                     console.log(r.descripcion);
                                 }
@@ -5874,7 +5874,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta5"){
-                                textoRecomendacion2.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
                                     console.log(r.descripcion);
                                 }
@@ -5885,7 +5885,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "4"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta1"){
-                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
                                     console.log(r.descripcion);
                                 }
@@ -5895,7 +5895,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta2"){
-                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
                                     console.log(r.descripcion);
                                 }
@@ -5905,7 +5905,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta3"){
-                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
                                     console.log(r.descripcion);
                                 }
@@ -5915,7 +5915,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta4"){
-                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
                                     console.log(r.descripcion);
                                 }
@@ -5925,7 +5925,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta5"){
-                                textoRecomendacion3.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
                                     console.log(r.descripcion);
                                 }
@@ -5936,7 +5936,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "5"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "5"){if(re.id === "respuesta1"){
-                            textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
                                 console.log(r.descripcion);
                             }
@@ -5946,7 +5946,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta2"){
-                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
                                     console.log(r.descripcion);
                                 }
@@ -5956,7 +5956,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta3"){
-                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
                                     console.log(r.descripcion);
                                 }
@@ -5966,7 +5966,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta4"){
-                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
                                     console.log(r.descripcion);
                                 }
@@ -5976,7 +5976,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta5"){
-                                textoRecomendacion4.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
                                     console.log(r.descripcion);
                                 }
@@ -5987,7 +5987,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "6"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "6"){if(re.id === "respuesta1"){
-                            textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
                                 console.log(r.descripcion);
                             }
@@ -5997,7 +5997,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta2"){
-                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
                                     console.log(r.descripcion);
                                 }
@@ -6007,7 +6007,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta3"){
-                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
                                     console.log(r.descripcion);
                                 }
@@ -6017,7 +6017,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta4"){
-                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
                                     console.log(r.descripcion);
                                 }
@@ -6027,7 +6027,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta5"){
-                                textoRecomendacion5.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
                                     console.log(r.descripcion);
                                 }
@@ -6038,7 +6038,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "7"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "7"){if(re.id === "respuesta1"){
-                            textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
                                 console.log(r.descripcion);
                             }
@@ -6048,7 +6048,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta2"){
-                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
                                     console.log(r.descripcion);
                                 }
@@ -6058,7 +6058,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta3"){
-                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
                                     console.log(r.descripcion);
                                 }
@@ -6068,7 +6068,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta4"){
-                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
                                     console.log(r.descripcion);
                                 }
@@ -6078,7 +6078,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta5"){
-                                textoRecomendacion6.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
                                     console.log(r.descripcion);
                                 }
@@ -6089,7 +6089,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "8"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "8"){if(re.id === "respuesta1"){
-                            textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
                                 console.log(r.descripcion);
                             }
@@ -6099,7 +6099,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta2"){
-                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
                                     console.log(r.descripcion);
                                 }
@@ -6109,7 +6109,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta3"){
-                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
                                     console.log(r.descripcion);
                                 }
@@ -6119,7 +6119,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta4"){
-                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
                                     console.log(r.descripcion);
 
@@ -6130,7 +6130,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta5"){
-                                textoRecomendacion7.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
                                     console.log(r.descripcion);
                                 }
@@ -6141,7 +6141,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "9"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "9"){if(re.id === "respuesta1"){
-                            textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
                                 console.log(r.descripcion);
                             }
@@ -6151,7 +6151,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta2"){
-                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
                                     console.log(r.descripcion);
                                 }
@@ -6161,7 +6161,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta3"){
-                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
                                     console.log(r.descripcion);
                                 }
@@ -6171,7 +6171,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta4"){
-                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
                                     console.log(r.descripcion);
                                 }
@@ -6181,7 +6181,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta5"){
-                                textoRecomendacion8.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
                                     console.log(r.descripcion);
                                 }
@@ -6192,7 +6192,7 @@ const moment = require("moment/moment");
                 if(r.item_id === "10"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "10"){if(re.id === "respuesta1"){
-                            textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                            textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
                                 console.log(r.descripcion);
                             }
@@ -6202,7 +6202,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta2"){
-                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
                                     console.log(r.descripcion);
                                 }
@@ -6212,7 +6212,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta3"){
-                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
                                     console.log(r.descripcion);
                                 }
@@ -6222,7 +6222,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta4"){
-                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
                                     console.log(r.descripcion);
                                 }
@@ -6232,7 +6232,7 @@ const moment = require("moment/moment");
                     if(r.opcion === "5"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta5"){
-                                textoRecomendacion9.textContent = "Tu recomendacion es: " + r.descripcion;
+                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
                                     console.log(r.descripcion);
                                 }
@@ -6308,7 +6308,7 @@ const moment = require("moment/moment");
             }
         })
         res1 = res1.toFixed(1);
-        textoRespuesta.textContent = "Tu puntaje es: " + res1;
+        textoRespuesta.textContent = "Tu puntaje es: " + res1 + "/100";
         contenedorRespuesta.appendChild(textoRespuesta);
         limpiarRespuesta();
         res1=0;

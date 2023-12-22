@@ -16,9 +16,11 @@
         <label for="consulta">Escriba a continuacion su consulta.</label>
         <textarea name="consulta" id="consulta" cols="100" rows="7" maxlength="250" placeholder="Su consulta aqui."></textarea>
     </div>
-    <input type="submit" class="boton" value="Realizar Pregunta">
+    <div class="enlace-volver">
+        <a href="/dashboard" class="enlace"> Volver </a>  
+        <input type="submit" class="boton" value="Realizar Pregunta">         
+    </div>
 </form>
-<a href="/dashboard" class="enlace"> Volver</a>    
 
 <?php include_once __DIR__ . '/footer-dashboard.php'; ?>
 <?php $script .= '
