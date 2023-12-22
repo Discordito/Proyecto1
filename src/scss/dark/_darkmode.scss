@@ -61,11 +61,19 @@
         background-color: $grisOscuro;
         .enlace {
             color: v.$grisClaro;
+            font-weight: bold;
             &:hover {
-                color: darken(v.$grisClaro, 20%);
+                color: darken(v.$grisClaro, 20%);                
             }
         }
         .formulario input:not([type=submit]) {
+            background-color: lighten($grisOscuro, 20%);
+            color: v.$blanco;
+            &::placeholder {
+                color: darken(v.$grisClaro, 30%);
+            }
+        }
+        .formulario input[type=submit] {
             background-color: lighten($grisOscuro, 20%);
             color: v.$blanco;
             &::placeholder {
@@ -100,5 +108,100 @@
             color: v.$grisClaro;
         }
     }
-
+    .estandar {
+        background-color: lighten($grisOscuro, 10%);
+        p{
+           color: darken(v.$grisClaro, 5%);
+        }
+    }
+    .puntaje{
+        p, .puntaje-texto{
+            color: v.$grisClaro;
+        }
+    }
+    .textoConsulta {
+        input[type="text"]{
+            border: 1px solid black;
+        }
+        textarea{
+            background-color: lighten($grisOscuro, 20%);
+            border: 1px solid black;            
+        }
+        textarea::placeholder{
+            color: v.$grisClaro;
+        }
+    }
+    .donaciones {
+        p{
+            color: darken(v.$grisClaro, 10%);
+        }
+    }
+    .listado-items{
+        li{
+            background-color: lighten($grisOscuro, 10%);
+            p{
+                color: darken(v.$grisClaro, 20%);
+            }
+        }
+    }
+    .membresia {
+        p{
+            color: darken(v.$grisClaro, 20%);
+        }
+    }
+    .listado-pregunta{
+        a{
+            color: darken(v.$grisClaro, 10%);
+            font-weight: bold;
+        }
+    }
+    .pregunta-usuario {
+        p, h3{
+            color: darken(v.$grisClaro, 20%);
+        }
+    }
+    .contenedor-preguntas{
+        p{
+            color: darken(v.$grisClaro, 20%);
+        }
+    }
+    .pregunta {
+        p{
+            color: darken(v.$grisClaro, 20%);
+        }
+        .opciones{
+            button{
+                background-color: v.$grisClaro;
+            }
+            .completa{
+                background-color: v.$grisOscuro;
+            }
+            .pendiente{
+                background-color: darken(v.$naranja, 15%);
+            }
+            .responder-pregunta{
+                background-color: darken(v.$cyan, 20%);
+            }            
+        }
+        textarea{
+            background-color: lighten($grisOscuro, 10%);
+            color: darken(v.$grisClaro, 20%);
+            border: 1px solid black;
+        }
+        button{
+            background-color: lighten($grisOscuro, 20%);
+            border: none;
+            color: darken(v.$grisClaro, 5%);
+            border: 1px solid black;
+            font-weight: b;
+        }
+    }
+    .eslogan {
+        color: darken(v.$grisClaro, 20%);
+    }
+    .listado-recomendaciones{
+        p{
+            color: darken(v.$grisClaro, 20%);
+        }
+    }
 }
