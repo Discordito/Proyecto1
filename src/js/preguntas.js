@@ -123,7 +123,7 @@
         datos.append('usuarios_id', usuarios_id);
         
         try {
-            const url = '/preguntas/actualizar';
+            const url = '/api/preguntas/actualizar';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
