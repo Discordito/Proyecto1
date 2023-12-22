@@ -125,6 +125,7 @@
         }
         textarea{
             background-color: lighten($grisOscuro, 20%);
+            color: darken(v.$grisClaro, 20%);
             border: 1px solid black;            
         }
         textarea::placeholder{
