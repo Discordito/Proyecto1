@@ -123,7 +123,7 @@
         datos.append('usuarios_id', usuarios_id);
         
         try {
-            const url = 'https://responsible-affair-ser.domcloud.dev/api/preguntas/actualizar';
+            const url = 'http://localhost:3000/api/preguntas/actualizar';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -142,8 +142,7 @@
             
         } catch (error) {
             console.log(error);
-        }
-        
+        }        
     }
     function guardarRespuesta(pregunta){
         verificar(pregunta);
@@ -163,7 +162,7 @@
             }            
         });        
     }
-    async function responder(pregunta){        
+    async function responder(pregunta){      
 
         const {descripcion, estado, estandar_id, id, respuesta, titulo, url, usuarios_id} = pregunta;
         const datos = new FormData();
@@ -177,7 +176,7 @@
         datos.append('usuarios_id', usuarios_id);
 
         try {
-            const url = 'https://responsible-affair-ser.domcloud.dev/api/preguntas/responder';
+            const url = 'http://localhost:3000/api/preguntas/responder';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -186,6 +185,7 @@
             if(resultado.respuesta.tipo === 'exito'){
                 mostrarAlerta(resultado.respuesta.mensaje, resultado.respuesta.tipo, document.querySelector('.contenedor-preguntas'));
                 limpiarRespuesta();
+                obtenerPreguntas();
             }
         } catch (error) {
             console.log(error);

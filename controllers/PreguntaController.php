@@ -30,8 +30,7 @@ class PreguntaController {
                     'mensaje' => 'Actualizado Correctamente'
                 ];
                 echo json_encode(['respuesta' => $respuesta]);
-            }
-           
+            }           
         }
     }
     public static function responder(){
