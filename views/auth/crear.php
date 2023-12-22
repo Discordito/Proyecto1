@@ -7,11 +7,11 @@
         <form action="/crear" method="POST" class="formulario">
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?php $usuario->nombre; ?>">
+                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?php $usuario->nombre; ?>" maxlength="30">
             </div>
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Tu Email" value="<?php $usuario->email; ?>">
+                <input type="email" name="email" id="email" placeholder="Tu Email" value="<?php $usuario->email; ?>" maxlength="40">
             </div>
             <div class="campo">
                 <label for="password">Contraseña</label>

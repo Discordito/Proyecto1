@@ -5,11 +5,11 @@
     <form action="/perfil" class="formulario" method="POST">
         <div class="campo">
             <label for="nombre">Nombre:</label>
-            <input type="text" value="<?php echo $usuario->nombre; ?>" name="nombre" placeholder="Tu Nombre">
+            <input type="text" value="<?php echo $usuario->nombre; ?>" name="nombre" placeholder="Tu Nombre" maxlength="30">
         </div>
         <div class="campo">
             <label for="email">Email:</label>
-            <input type="email" value="<?php echo $usuario->email; ?>" name="email" placeholder="Tu email">
+            <input type="email" value="<?php echo $usuario->email; ?>" name="email" placeholder="Tu email" maxlength="40">
         </div>
         <div class="btnes-perfil">
             <a href="/cambiar-password" class="enlace">Cambiar Contraseña</a>

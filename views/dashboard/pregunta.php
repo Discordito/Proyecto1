@@ -12,9 +12,9 @@
 <form action="" method="POST" class="formulario">
     <div class="textoConsulta">
         <label for="titulo">Titulo de su consulta.</label>
-        <input type="text" id="titulo" name="titulo">
+        <input type="text" id="titulo" name="titulo" maxlength="40">
         <label for="consulta">Escriba a continuacion su consulta.</label>
-        <textarea name="consulta" id="consulta"  cols="100" rows="7">></textarea>
+        <textarea name="consulta" id="consulta"  cols="100" rows="7" maxlength="250">></textarea>
     </div>
     <input type="submit" class="boton" value="Realizar Pregunta">
 </form>

@@ -7,7 +7,7 @@
         <form action="/olvide" method="POST" class="formulario">
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Tu Email">
+                <input type="email" name="email" id="email" placeholder="Tu Email" maxlength="40">
             </div>
             <input type="submit" class="boton" value="Enviar Instrucciones">
         </form>

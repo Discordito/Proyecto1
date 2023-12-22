@@ -148,6 +148,7 @@
         verificar(pregunta);
         let variable = '';
         let textarea = document.createElement("textarea");
+        textarea.setAttribute("maxlength", "300");
         const btnGuardar = document.createElement('BUTTON');
         btnGuardar.textContent = 'Guardar';
         const preg = document.querySelectorAll('.pregunta');
