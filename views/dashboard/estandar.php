@@ -11,23 +11,23 @@
                 </p>                            
                 <div class="preguntas" id="preguntas">                        
                     <div class="pregunta">
-                        <label for="respuesta1">Muy Poco</label>
+                        <label for="respuesta1">No existe</label>
                         <input type="radio" id="respuesta1" name="<?php echo $item->id; ?>" value="20" checked/>
                     </div>
                     <div class="pregunta">
-                        <label for="respuesta2">Poco</label>
+                        <label for="respuesta2">Sin implementar</label>
                         <input type="radio" id="respuesta2" name="<?php echo $item->id; ?>" value="40"/> 
                     </div>
                     <div class="pregunta">
-                        <label for="respuesta3">Normal</label>
+                        <label for="respuesta3">Desactualizado</label>
                         <input type="radio" id="respuesta3" name="<?php echo $item->id; ?>"value="60" />
                     </div>
                     <div class="pregunta">
-                        <label for="respuesta4">Mucho</label>
+                        <label for="respuesta4">Parciales</label>
                         <input type="radio" id="respuesta4" name="<?php echo $item->id; ?>" value="80"/>  
                     </div>
                     <div class="pregunta">
-                        <label for="respuesta5">Demasiado</label>
+                        <label for="respuesta5">Completos</label>
                         <input type="radio" id="respuesta5" name="<?php echo $item->id; ?>" value="100"/>
                     </div>                  
                 </div>

@@ -5715,6 +5715,12 @@ const moment = require("moment/moment");
         const textoRecomendacion7 = document.createElement('P');
         const textoRecomendacion8 = document.createElement('P');
         const textoRecomendacion9 = document.createElement('P');
+        const textoRecomendacion10 = document.createElement('P');
+        const textoRecomendacion11 = document.createElement('P');
+        const textoRecomendacion12 = document.createElement('P');
+        const textoRecomendacion13 = document.createElement('P');
+        const textoRecomendacion14 = document.createElement('P');
+        const textoRecomendacion15 = document.createElement('P');
         textoRecomendacion.classList.add('recomendacion-texto');
         textoRecomendacion1.classList.add('recomendacion-texto');
         textoRecomendacion2.classList.add('recomendacion-texto');
@@ -5725,6 +5731,12 @@ const moment = require("moment/moment");
         textoRecomendacion7.classList.add('recomendacion-texto');
         textoRecomendacion8.classList.add('recomendacion-texto');
         textoRecomendacion9.classList.add('recomendacion-texto');
+        textoRecomendacion10.classList.add('recomendacion-texto');
+        textoRecomendacion11.classList.add('recomendacion-texto');
+        textoRecomendacion12.classList.add('recomendacion-texto');
+        textoRecomendacion13.classList.add('recomendacion-texto');
+        textoRecomendacion14.classList.add('recomendacion-texto');
+        textoRecomendacion15.classList.add('recomendacion-texto');
         
 
         recomendaciones.forEach( reco => {
@@ -5732,9 +5744,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "1"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta1"){
-                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
-                                console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5742,9 +5753,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta2"){
-                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5752,9 +5762,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta3"){
-                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5762,30 +5771,19 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "1"){if(re.id === "respuesta4"){
-                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
                     }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "1"){if(re.id === "respuesta5"){
-                                textoRecomendacion.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
+                    
                 }
                 if(r.item_id === "2"){ if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta1"){
-                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion1.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5793,9 +5791,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta2"){
-                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion1.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5803,9 +5800,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta3"){
-                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion1.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5813,19 +5809,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "2"){if(re.id === "respuesta4"){
-                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion1.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion1);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "2"){if(re.id === "respuesta5"){
-                                textoRecomendacion1.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion1);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5834,9 +5819,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "3"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta1"){
-                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion2.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5844,9 +5828,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta2"){
-                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion2.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5854,9 +5837,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){ if(re.id === "respuesta3"){
-                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion2.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5864,19 +5846,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "3"){if(re.id === "respuesta4"){
-                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion2.textContent ="2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion2);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "3"){if(re.id === "respuesta5"){
-                                textoRecomendacion2.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion2);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5885,9 +5856,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "4"){if(r.opcion === "1"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta1"){
-                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion3.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5895,9 +5865,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta2"){
-                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion3.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5905,9 +5874,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta3"){
-                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion3.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5915,19 +5883,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "4"){if(re.id === "respuesta4"){
-                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion3.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion3);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "4"){if(re.id === "respuesta5"){
-                                textoRecomendacion3.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion3);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5936,9 +5893,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "5"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "5"){if(re.id === "respuesta1"){
-                            textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion4.textContent = "4. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -5946,9 +5902,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta2"){
-                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion4.textContent = "4. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5956,9 +5911,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta3"){
-                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion4.textContent = "4. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5966,19 +5920,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "5"){if(re.id === "respuesta4"){
-                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion4.textContent = "4. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion4);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "5"){if(re.id === "respuesta5"){
-                                textoRecomendacion4.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion4);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -5987,9 +5930,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "6"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "6"){if(re.id === "respuesta1"){
-                            textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion5.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -5997,9 +5939,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta2"){
-                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion5.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6007,9 +5948,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta3"){
-                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion5.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6017,19 +5957,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "6"){if(re.id === "respuesta4"){
-                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion5.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion5);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "6"){if(re.id === "respuesta5"){
-                                textoRecomendacion5.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion5);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6038,9 +5967,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "7"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "7"){if(re.id === "respuesta1"){
-                            textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion6.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -6048,9 +5976,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta2"){
-                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion6.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6058,9 +5985,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta3"){
-                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion6.textContent = "3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6068,19 +5994,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "7"){if(re.id === "respuesta4"){
-                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion6.textContent ="3. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion6);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "7"){if(re.id === "respuesta5"){
-                                textoRecomendacion6.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion6);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6089,9 +6004,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "8"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "8"){if(re.id === "respuesta1"){
-                            textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion7.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -6099,9 +6013,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta2"){
-                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion7.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6109,9 +6022,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta3"){
-                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion7.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6119,20 +6031,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "8"){if(re.id === "respuesta4"){
-                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion7.textContent = "4. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion7);
-                                    console.log(r.descripcion);
-
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "8"){if(re.id === "respuesta5"){
-                                textoRecomendacion7.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion7);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6141,9 +6041,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "9"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "9"){if(re.id === "respuesta1"){
-                            textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion8.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -6151,9 +6050,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta2"){
-                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion8.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6161,9 +6059,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta3"){
-                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion8.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6171,19 +6068,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "9"){if(re.id === "respuesta4"){
-                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion8.textContent = "2. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion8);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "9"){if(re.id === "respuesta5"){
-                                textoRecomendacion8.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion8);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6192,9 +6078,8 @@ const moment = require("moment/moment");
                 if(r.item_id === "10"){if(r.opcion === "1"){
                     respuestas.forEach( re => {
                         if(re.name === "10"){if(re.id === "respuesta1"){
-                            textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
+                            textoRecomendacion9.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
-                                console.log(r.descripcion);
                             }
                         }                                                     
                     })
@@ -6202,9 +6087,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "2"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta2"){
-                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion9.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6212,9 +6096,8 @@ const moment = require("moment/moment");
                     if(r.opcion === "3"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta3"){
-                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion9.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
@@ -6222,29 +6105,237 @@ const moment = require("moment/moment");
                     if(r.opcion === "4"){
                         respuestas.forEach( re => {
                             if(re.name === "10"){if(re.id === "respuesta4"){
-                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
+                                textoRecomendacion9.textContent = "1. " + r.descripcion;
                                 contenedorRecomendacion.appendChild(textoRecomendacion9);
-                                    console.log(r.descripcion);
-                                }
-                            }                                                     
-                        })
-                    }
-                    if(r.opcion === "5"){
-                        respuestas.forEach( re => {
-                            if(re.name === "10"){if(re.id === "respuesta5"){
-                                textoRecomendacion9.textContent = re.name + ". " + r.descripcion;
-                                contenedorRecomendacion.appendChild(textoRecomendacion9);
-                                    console.log(r.descripcion);
                                 }
                             }                                                     
                         })
                     }
                 }
-            
+                if(r.item_id === "11"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "11"){if(re.id === "respuesta1"){
+                            textoRecomendacion10.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion10);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "11"){if(re.id === "respuesta2"){
+                                textoRecomendacion10.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion10);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "11"){if(re.id === "respuesta3"){
+                                textoRecomendacion10.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion10);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "11"){if(re.id === "respuesta4"){
+                                textoRecomendacion10.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion10);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "12"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "12"){if(re.id === "respuesta1"){
+                            textoRecomendacion11.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion11);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "12"){if(re.id === "respuesta2"){
+                                textoRecomendacion11.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion11);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "12"){if(re.id === "respuesta3"){
+                                textoRecomendacion11.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion11);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "12"){if(re.id === "respuesta4"){
+                                textoRecomendacion11.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion11);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "13"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "13"){if(re.id === "respuesta1"){
+                            textoRecomendacion12.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion12);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "13"){if(re.id === "respuesta2"){
+                                textoRecomendacion12.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion12);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "13"){if(re.id === "respuesta3"){
+                                textoRecomendacion12.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion12);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "13"){if(re.id === "respuesta4"){
+                                textoRecomendacion12.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion12);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "14"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "14"){if(re.id === "respuesta1"){
+                            textoRecomendacion13.textContent = "2. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion13);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "14"){if(re.id === "respuesta2"){
+                                textoRecomendacion13.textContent = "2. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion13);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "14"){if(re.id === "respuesta3"){
+                                textoRecomendacion13.textContent = "2. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion13);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "14"){if(re.id === "respuesta4"){
+                                textoRecomendacion13.textContent = "2. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion13);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "15"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "15"){if(re.id === "respuesta1"){
+                            textoRecomendacion14.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion14);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "15"){if(re.id === "respuesta2"){
+                                textoRecomendacion14.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion14);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "15"){if(re.id === "respuesta3"){
+                                textoRecomendacion14.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion14);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "15"){if(re.id === "respuesta4"){
+                                textoRecomendacion14.textContent = "3. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion14);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
+                if(r.item_id === "16"){if(r.opcion === "1"){
+                    respuestas.forEach( re => {
+                        if(re.name === "16"){if(re.id === "respuesta1"){
+                            textoRecomendacion15.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion15);
+                            }
+                        }                                                     
+                    })
+                }
+                    if(r.opcion === "2"){
+                        respuestas.forEach( re => {
+                            if(re.name === "16"){if(re.id === "respuesta2"){
+                                textoRecomendacion15.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion15);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "3"){
+                        respuestas.forEach( re => {
+                            if(re.name === "16"){if(re.id === "respuesta3"){
+                                textoRecomendacion15.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion15);
+                                }
+                            }                                                     
+                        })
+                    }
+                    if(r.opcion === "4"){
+                        respuestas.forEach( re => {
+                            if(re.name === "16"){if(re.id === "respuesta4"){
+                                textoRecomendacion15.textContent = "4. " + r.descripcion;
+                                contenedorRecomendacion.appendChild(textoRecomendacion15);
+                                }
+                            }                                                     
+                        })
+                    }
+                }
             })            
-        })
-          
-            
+        })    
     }
     function limpiarRecomendacion() {
         const recomendacionAnterior = document.querySelector('.listado-recomendaciones');
@@ -6282,29 +6373,41 @@ const moment = require("moment/moment");
             if (r.name === "1") {
                 res1 = (r.value*0.2);
             }if(r.name === "3") {
-                res1 = res1+(r.value*0.5)
+                res1 = res1+(r.value*0.3)
             }if(r.name === "4") {
-                res1 = res1+(r.value*0.2)
+                res1 = res1+(r.value*0.3)
             }if(r.name === "5") {
-                res1 = res1+(r.value*0.1)
+                res1 = res1+(r.value*0.2)
             }
             //Estandar 2
             if(r.name === "2") {
-                res1 = res1+(r.value*0.6)
+                res1 = res1+(r.value*0.1)
             }if(r.name === "6") {
-                res1 = res1+(r.value*0.2)
+                res1 = res1+(r.value*0.4)
             }if(r.name === "7") {
-                res1 = res1+(r.value*0.2)
+                res1 = res1+(r.value*0.1)
+            }if(r.name === "11") {
+                res1 = res1+(r.value*0.4)
             }
             //Estandar 3
             if(r.name === "8") {
-                res1 = res1+(r.value*0.5)
+                res1 = res1+(r.value*0.4)
             }if(r.name === "9") {
-                res1 = res1+(r.value*0.5)
+                res1 = res1+(r.value*0.3)
+            }if(r.name === "12") {
+                res1 = res1+(r.value*0.1)
+            }if(r.name === "13") {
+                res1 = res1+(r.value*0.2)
             }
             //Estandar 4
             if(r.name === "10") {
-                res1 = res1+(r.value*1)
+                res1 = res1+(r.value*0.1)
+            }if(r.name === "14") {
+                res1 = res1+(r.value*0.2)
+            }if(r.name === "15") {
+                res1 = res1+(r.value*0.2)
+            }if(r.name === "16") {
+                res1 = res1+(r.value*0.5)
             }
         })
         res1 = res1.toFixed(1);
