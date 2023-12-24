@@ -23,6 +23,7 @@
                 <input type="password" name="password2" id="password2" placeholder="Repite tu Contraseña">
                 <i class="fa fa-eye" id="togglePassword2"></i>
             </div>
+            <p class="disclaimer">Al crear una cuenta acepta que almacenemos sus datos para uso interno del sistema.</p>
             <input type="submit" class="boton" value="Crear Cuenta">
         </form>
         <div class="acciones">
