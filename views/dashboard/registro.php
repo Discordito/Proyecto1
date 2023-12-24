@@ -1,11 +1,12 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
-<ul class="listado-items" id="listado-items">    
+<ul class="listado-items" id="listado-items">   
+
     <?php foreach($registros as $registro){ ?>
         <li class="registro">            
             <div class="registros">
                 <p>Fecha: <?php echo $registro->date;?></p>
-                <p>Estandar: <?php echo $registro->estandar_id; ?></p>
+                <p>Estandar: <?php echo $registro->nombre; ?></p>
                 <p>Puntaje: <?php echo $registro->puntaje;?></p>
             </div>
         </li>        

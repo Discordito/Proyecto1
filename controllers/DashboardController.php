@@ -173,7 +173,9 @@ class DashboardController {
         foreach($registros as $reg){
             $nwDate = $reg->date;
             $fnDate = date("d-m-Y H:i:s", strtotime($nwDate)); 
-            $reg->date = $fnDate;          
+            $reg->date = $fnDate;
+            $nombre = Estandar::where('id', $reg->estandar_id);
+            $reg->nombre = $nombre->nombre; 
         }
         $router->render('dashboard/registro',[
             'titulo' => 'Registros',

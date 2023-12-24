@@ -34,9 +34,6 @@ $router->get('/confirmar', [LoginController::class, 'confirmar']);
 
 //dashboard / estandares
 $router->get('/dashboard', [DashboardController::class, 'index']);
-$router->get('/crear-proyecto', [DashboardController::class, 'crear_proyecto']);
-$router->post('/crear-proyecto', [DashboardController::class, 'crear_proyecto']);
-$router->get('/proyecto', [DashboardController::class, 'proyecto']);
 $router->get('/estandar', [DashboardController::class, 'estandar']);
 $router->post('/estandar', [DashboardController::class, 'estandar']);
 $router->get('/perfil', [DashboardController::class, 'perfil']);
