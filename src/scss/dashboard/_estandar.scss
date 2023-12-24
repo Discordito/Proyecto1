@@ -52,7 +52,9 @@ p{
 .listado-recomendaciones{
     p {
         display: flex;
-        justify-content: center;              
+        justify-content: center; 
+        font-size: 1.6rem;      
+        font-weight: bold;       
         @include m.tablet {        
             justify-content: left;
         }
