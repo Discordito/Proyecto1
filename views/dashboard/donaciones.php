@@ -1,7 +1,7 @@
 <?php include_once __DIR__ . '/header-dashboard.php'; ?>
 
 <div class="donaciones">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eligendi, natus aut sunt, laboriosam temporibus at dolore cupiditate cumque reprehenderit mollitia. Ipsum architecto error aliquid totam quasi fugiat eius officia.</p>
+    <p>La plataforma, sus sistemas y funcionalidades fueron creadas y diseñadas unicamente por su administrador. Cada donación realizada sera destinada al mantenimiento y mejora del sitio web para el uso y disfrute de toda la comunidad. Muchas gracias!</p>
     <div class="boton-donacion">
         <div id="donate-button-container">
             <div id="donate-button"></div>
