@@ -1,6 +1,6 @@
 <aside class="sidebar">
     <div class="contenedor-sidebar">
-    <h2>'P.D.'</h2>
+    <h2>'S.C.'</h2>
     <div class="cerrar-menu">
         <img src="build/img/cerrar.svg" alt="imagen cerrar menu" id="cerrar-menu">
     </div>
