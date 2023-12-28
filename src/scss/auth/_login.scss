@@ -2,9 +2,13 @@
 @use 'base/mixins' as m;
 
 .login {
-    margin-top: 5rem;
+    margin-top: 5rem;    
     .logo {
         @include m.textoDegradado(v.$cyan);
+        font-size: 4rem;
+        @include m.tablet {
+            font-size: 6.5rem;
+        }
     }
     input[type="submit"] {
         @include m.boton(v.$cyan, v.$blanco)
